@@ -1,3 +1,6 @@
 /* design-system */
 @import url(./design-system/reset.css);
 @import url(./design-system/design.css);
+
+/* Header and Footer */
+@import url(./global/header.css);

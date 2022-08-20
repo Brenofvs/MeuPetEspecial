@@ -1,3 +1,8 @@
+:root {
+  background-color: var(--cor-1);
+  background-image: url(../../imagens/dec/BG.svg);
+}
+
 body {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;

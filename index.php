@@ -14,7 +14,45 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <header>
+    <div class="header-bg">
+        <div class="container">
+            <div class="search-box">
+                <a class="search-btn" href="#"><img src="./imagens/dec/lupag.svg" alt="Buscar" /></a>
+                <input type="text" name="" class="search-txt font-menu" placeholder="Pesquisar..." />
+            </div>
+            <div class="social-media">
+                <a href="#" target="_blank"><img src="./imagens/logo/youtube-logo.svg" alt="youtube"></a>
+                <a href="#" target="_blank"><img src="./imagens/logo/facebook-logo.svg" alt="facebook"></a>
+                <a href="#" target="_blank"><img src="./imagens/logo/insta-logo.svg" alt="instagram"></a>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="./imagens/logo/header-logo.svg" alt="logo"></a>
+            </div>
+            <div class="links">
+                <ul class="links-lista cor-p5">
+                    <li class="font-menu">
+                        <a href="#">Matérias</a>
+                    </li>
+                    <li class="font-menu">
 
+                        <a href="#">Envie sua história</a>
+                    </li>
+                    <li class="font-menu">
+
+                        <a href="#">Quem somos</a>
+                    </li>
+                    <li class="font-menu">
+
+                        <a href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </header>
 
 <body>
