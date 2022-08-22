@@ -12,6 +12,9 @@
     <title>Meu Pet Especial</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <header>
     <div class="header-bg">
@@ -56,7 +59,48 @@
 </header>
 
 <body>
+    <main>
+        <div class="main-home container">
+            <h1 class="home-title font-title-xs">Últimas Matérias</h1>
 
+            <div class="main-section">
+
+                <div class="main-banner">
+                    <img src="./imagens/pets/pet07.png" alt="">
+                    <div class="main-banner-data">
+                        <h3 class="font-menu cor-11">Nome do Pet</h3>
+                        <p class="font-text-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim</p>
+                        <a href="#" class="botao">Saiba Mais</a>
+                        <div class="data-bg"></div>
+                    </div>
+                </div>
+
+                <div class="picture">
+
+                    <div class="pic-mask">
+                        <img src="./imagens/pets/pet01.jpg" alt="">
+                    </div>
+
+                    <div class="pic-mask">
+                        <img src="./imagens/pets/pet04.jpg" alt="">
+                    </div>
+
+                    <div class="pic-mask">
+                        <img src="./imagens/pets/pet02.jpg" alt="">
+                    </div>
+
+                    <div class="pic-mask">
+                        <img src="./imagens/pets/pet06.jpg" alt="">
+                    </div>
+
+                    <div class="pic-mask">
+                        <img src="./imagens/pets/pet03.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

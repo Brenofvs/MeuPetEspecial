@@ -4,3 +4,6 @@
 
 /* Header and Footer */
 @import url(./global/header.css);
+
+/* Home */
+@import url(./home/home.css);

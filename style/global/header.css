@@ -1,3 +1,4 @@
+/* Caixa de busca e redes sociais */
 .header-bg {
   width: 100%;
   height: 60px;
@@ -57,11 +58,16 @@
           animation-iteration-count: 1;
 }
 
+.social-media {
+  display: flex;
+  gap: 2.5rem;
+}
+
 @-webkit-keyframes hidebtn {
   0% {
     opacity: 1;
   }
-  50% {
+  40% {
     opacity: 0;
   }
   100% {
@@ -73,7 +79,7 @@
   0% {
     opacity: 1;
   }
-  50% {
+  40% {
     opacity: 0;
   }
   100% {
@@ -96,11 +102,7 @@
     flex-direction: row-reverse;
   }
 }
-.social-media {
-  display: flex;
-  gap: 2.5rem;
-}
-
+/* Menus e links */
 .menu {
   width: 100%;
   margin-top: 1.25rem;
