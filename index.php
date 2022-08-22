@@ -60,44 +60,65 @@
 
 <body>
     <main>
-        <div class="main-home container">
-            <h1 class="home-title font-title-xs">Últimas Matérias</h1>
+        <div class="main-home">
+            <h1 class="home-title font-title-xl">Últimas Matérias</h1>
+            <div class="main-section-container">
+                <div class="main-section">
+                    <div class="main-banner">
+                        <img src="./imagens/pets/pet07.png" alt="">
+                        <div class="main-banner-data">
+                            <div class="main-banner-container">
+                                <h3 class="font-menu cor-11">Nome do Pet</h3>
+                                <p class="font-text-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim</p>
+                                <a href="#" class="botao">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="main-section">
+                    <div class="picture">
 
-                <div class="main-banner">
-                    <img src="./imagens/pets/pet07.png" alt="">
-                    <div class="main-banner-data">
-                        <h3 class="font-menu cor-11">Nome do Pet</h3>
-                        <p class="font-text-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim</p>
-                        <a href="#" class="botao">Saiba Mais</a>
-                        <div class="data-bg"></div>
+                        <div class="pic-mask">
+                            <img src="./imagens/pets/pet01.jpg" alt="">
+                        </div>
+
+                        <div class="pic-mask">
+                            <img src="./imagens/pets/pet04.jpg" alt="">
+                        </div>
+
+                        <div class="pic-mask">
+                            <img src="./imagens/pets/pet02.jpg" alt="">
+                        </div>
+
+                        <div class="pic-mask">
+                            <img src="./imagens/pets/pet06.jpg" alt="">
+                        </div>
+
+                        <div class="pic-mask">
+                            <img src="./imagens/pets/pet03.jpg" alt="">
+                        </div>
+
                     </div>
                 </div>
-
-                <div class="picture">
-
-                    <div class="pic-mask">
-                        <img src="./imagens/pets/pet01.jpg" alt="">
+                <aside class="main-aside">
+                    <div class="aside-container">
+                        <h1 class="font-title-m">categorias</h1>
+                        <span class="font-menu dec">Histórias de leitores</span>
+                        <span class="font-menu dec">Matérias especiais</span>
+                        <span class="font-menu dec">Patologias e condições</span>
+                        <span class="font-menu dec">Petit, o grande motivador do site</span>
+                        <span class="font-menu dec">Vida, a cachorrinha atropelada</span>
+                        <span class="font-menu dec">Categoria Livre</span>
                     </div>
-
-                    <div class="pic-mask">
-                        <img src="./imagens/pets/pet04.jpg" alt="">
+                    <div class="aside-container">
+                        <h1 class="font-title-m">Redes sociais</h1>
+                        <span class="font-menu"><a href="#" class="aside-social-media"><img src="./imagens/logo/facebook-logo.svg" alt="">Facebook</a></span>
+                        <span class="font-menu"><a href="#" class="aside-social-media"><img src="./imagens/logo/youtube-logo.svg" alt="">Youtube</a></span>
+                        <span class="font-menu"><a href="#" class="aside-social-media"><img src="./imagens/logo/insta-logo.svg" alt="">Instagram</a></span>
                     </div>
-
-                    <div class="pic-mask">
-                        <img src="./imagens/pets/pet02.jpg" alt="">
+                    <div class="aside-container">
+                        <h1 class="font-title-m">Anúncio dos patrocinadores</h1>
                     </div>
-
-                    <div class="pic-mask">
-                        <img src="./imagens/pets/pet06.jpg" alt="">
-                    </div>
-
-                    <div class="pic-mask">
-                        <img src="./imagens/pets/pet03.jpg" alt="">
-                    </div>
-
-                </div>
+                </aside>
             </div>
         </div>
     </main>

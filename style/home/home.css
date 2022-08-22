@@ -1,28 +1,39 @@
 .main-home {
+  max-width: 1920px;
+  box-sizing: border-box;
+  margin: auto 150px;
   margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-section-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .home-title {
-  position: relative;
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
   justify-content: start;
   text-transform: capitalize;
+  margin-bottom: 2.5rem;
 }
 
-.home-title::after {
+.home-title::before {
   content: "";
   display: block;
   width: 0.25rem;
-  height: 3rem;
+  height: 4rem;
   background-image: var(--cor-g1);
   margin-right: 0.25rem;
 }
 
 .main-section {
-  margin-top: 2.5rem;
   max-width: 1100px;
+}
+.main-section h1 {
+  margin-bottom: 2.5rem;
 }
 
 .main-banner {
@@ -37,11 +48,14 @@
 
 .main-banner-data {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
-  width: 420px;
+  /* width: 38%; */
+  height: 32%;
   padding: 8px 20px 8px 8px;
   top: 65%;
-  left: calc(100% - 420px);
+  left: 62%;
   background-color: rgba(255, 115, 0, 0.25);
   border-radius: 4px 0 0 4px;
 }
@@ -56,12 +70,12 @@
   width: 100px;
   height: 2px;
 }
-.main-banner-data h3:hover::after {
-  width: 100px;
-}
 .main-banner-data p {
-  max-height: 95px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   margin-bottom: 12px;
   text-shadow: -1px 1px 2px rgba(255, 255, 255, 0.5);
 }
@@ -75,10 +89,156 @@
 }
 
 .pic-mask img {
-  width: 210px;
-  height: 210px;
+  max-height: 210px;
+  aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
   box-sizing: border-box;
   border: 1px solid var(--cor-p5);
+}
+
+/* aside menu */
+.main-aside {
+  width: 40%;
+  box-sizing: border-box;
+  margin-left: 2.5rem;
+}
+
+.aside-container {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 4px;
+  background-color: var(--cor-3);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1.25rem;
+  min-height: 210px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.aside-container h1 {
+  color: var(--cor-3);
+  background-color: var(--cor-11);
+  padding-left: 1.25rem;
+  padding-top: calc(1rem - 6px);
+  padding-bottom: calc(1rem - 6px);
+  box-sizing: border-box;
+  border-radius: 4px 4px 0 0;
+}
+.aside-container h1::after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 2px;
+  background-image: var(--cor-g1);
+}
+.aside-container span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+  padding-left: 1.25rem;
+  border-bottom: solid 2px var(--cor-p1);
+}
+.aside-container span a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aside-container span:last-child {
+  border: none;
+}
+.aside-container .dec::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 12px;
+  background-image: var(--cor-g1);
+}
+
+@media (max-width: 1600px) {
+  .main-banner-data h3 {
+    font-size: 1.15rem;
+  }
+  .main-banner-data p {
+    -webkit-line-clamp: 2;
+    font-size: 1rem;
+  }
+  .main-banner-data .botao {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  .main-aside h1 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 1366px) {
+  .main-banner-data h3 {
+    font-size: 1.25rem;
+  }
+  .main-banner-data p {
+    -webkit-line-clamp: 3;
+    font-size: 1.25rem;
+  }
+  .main-banner-data .botao {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+  .main-section-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .main-aside {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .main-aside h1 {
+    font-size: 1.25rem;
+  }
+  .main-aside span {
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .main-aside span a {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 1300px) {
+  .home-title {
+    font-size: 2rem;
+  }
+  .home-title::before {
+    height: 2.5rem;
+  }
+  .main-banner-data p {
+    -webkit-line-clamp: 2;
+  }
+  .main-aside {
+    display: none;
+  }
+}
+@media (max-width: 1150px) {
+  .home-title {
+    font-size: 1.8rem;
+  }
+  .home-title::before {
+    height: 2.3rem;
+  }
+  .main-banner-data h3 {
+    font-size: 1.2rem;
+  }
+  .main-banner-data p {
+    -webkit-line-clamp: 2;
+    font-size: 1.1rem;
+  }
+  .main-banner-data .botao {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=home.css.map */
