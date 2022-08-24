@@ -15,7 +15,7 @@
 .home-title {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   text-transform: capitalize;
   margin-bottom: 2.5rem;
   font-size: clamp(1.5rem, 2.5vw, 3rem);
@@ -137,7 +137,10 @@
   height: 2px;
   background-image: var(--cor-g1);
 }
-.aside-container span {
+.aside-container a {
+  border-bottom: solid 2px var(--cor-p1);
+}
+.aside-container a span {
   font-size: clamp(0.8rem, 0.95vw, 1.25rem);
   display: flex;
   flex-direction: row;
@@ -146,15 +149,14 @@
   padding: 10px 0;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-  border-bottom: solid 2px var(--cor-p1);
+  transition: 0.3s;
 }
-.aside-container span a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.aside-container span:last-child {
+.aside-container a:last-child {
   border: none;
+}
+.aside-container a:hover span {
+  transform-origin: top left;
+  transform: scale(1.05);
 }
 .aside-container .dec::before {
   content: "";
@@ -162,6 +164,10 @@
   width: 4px;
   height: 1em;
   background-image: var(--cor-g1);
+}
+.aside-container .aside-social-media {
+  display: flex;
+  gap: 8px;
 }
 
 @media (min-width: 1900px) {
