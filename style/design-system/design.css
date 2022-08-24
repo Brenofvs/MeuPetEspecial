@@ -105,7 +105,7 @@
 }
 
 .botao {
-  padding: 1rem 2rem;
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
   display: inline-block;
   background: var(--cor-g1);
   border-radius: 4px;
@@ -113,6 +113,7 @@
   text-transform: uppercase;
   color: var(--cor-gi);
   font: 600 1.125/1.35 "Poppins", sans-serif;
+  font-size: clamp(0.8rem, 1vw, 1.125rem) !important;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -151,36 +152,44 @@
 /* Tipografia */
 .font-title-xl {
   font: 600 3rem/1.35 "Poppins", sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
 }
 
 .font-title-m {
   font: 600 1.5rem/1.33 "Poppins", sans-serif;
+  font-size: clamp(0.75rem, 1.3vw, 1.5rem);
   text-transform: uppercase;
 }
 
 .font-subtitle {
   font: 600 1.5rem/1.2 "Poppins", sans-serif;
+  font-size: clamp(0.75rem, 1.3vw, 1.5rem);
 }
 
 .font-menu {
   font: 600 1.25rem/1.4 "Poppins", sans-serif;
+  font-size: clamp(0.8rem, 1.2vw, 1.25rem);
 }
 
 .font-info {
   font: 400 1rem/1.25 "Poppins", sans-serif;
+  font-size: clamp(0.62rem, 1vw, 1.25rem);
   text-transform: capitalize;
 }
 
 .font-text-l {
   font: 400 1.75rem/1.2 "Roboto", sans-serif;
+  font-size: clamp(0.85rem, 1.5vw, 1.75rem);
 }
 
 .font-text-m {
   font: 400 1.25rem/1.2 "Roboto", sans-serif;
+  font-size: clamp(0.62rem, 1vw, 1.25rem);
 }
 
 .font-text-sm {
   font: 400 1rem/1.25 "Roboto", sans-serif;
+  font-size: clamp(0.5rem, 0.85vw, 1rem);
 }
 
 /* @media (max-width: 1200px) {

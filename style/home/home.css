@@ -18,13 +18,14 @@
   justify-content: start;
   text-transform: capitalize;
   margin-bottom: 2.5rem;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
 }
 
 .home-title::before {
   content: "";
   display: block;
   width: 0.25rem;
-  height: 4rem;
+  height: 4vw;
   background-image: var(--cor-g1);
   margin-right: 0.25rem;
 }
@@ -61,16 +62,18 @@
 }
 .main-banner-data h3 {
   margin-bottom: 4px;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
 }
 .main-banner-data h3::after {
   content: "";
   display: block;
   margin-bottom: 8px;
   background-image: var(--cor-g1);
-  width: 100px;
+  width: 5vw;
   height: 2px;
 }
 .main-banner-data p {
+  font-size: clamp(0.8rem, 1.2vw, 1.25rem);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -119,11 +122,13 @@
 .aside-container h1 {
   color: var(--cor-3);
   background-color: var(--cor-11);
+  padding: calc(1rem - 6px) 1.25rem calc(1rem - 6px) 1.25rem;
   padding-left: 1.25rem;
   padding-top: calc(1rem - 6px);
   padding-bottom: calc(1rem - 6px);
   box-sizing: border-box;
   border-radius: 4px 4px 0 0;
+  font-size: clamp(0.8rem, 1vw, 1.5rem);
 }
 .aside-container h1::after {
   content: "";
@@ -133,12 +138,14 @@
   background-image: var(--cor-g1);
 }
 .aside-container span {
+  font-size: clamp(0.8rem, 0.95vw, 1.25rem);
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 4px;
   padding: 10px 0;
   padding-left: 1.25rem;
+  padding-right: 1.25rem;
   border-bottom: solid 2px var(--cor-p1);
 }
 .aside-container span a {
@@ -153,37 +160,27 @@
   content: "";
   display: block;
   width: 4px;
-  height: 12px;
+  height: 1em;
   background-image: var(--cor-g1);
 }
 
-@media (max-width: 1600px) {
-  .main-banner-data h3 {
-    font-size: 1.15rem;
+@media (min-width: 1900px) {
+  p {
+    -webkit-line-clamp: 3;
   }
+}
+@media (max-width: 1900px) {
   .main-banner-data p {
     -webkit-line-clamp: 2;
-    font-size: 1rem;
-  }
-  .main-banner-data .botao {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
-  .main-aside h1 {
-    font-size: 1.2rem;
   }
 }
 @media (max-width: 1366px) {
   .main-banner-data h3 {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
   }
   .main-banner-data p {
+    font-size: clamp(1rem, 1.3vw, 1.25rem);
     -webkit-line-clamp: 3;
-    font-size: 1.25rem;
-  }
-  .main-banner-data .botao {
-    padding: 1rem 2rem;
-    font-size: 1.125rem;
   }
   .main-section-container {
     flex-direction: column;
@@ -197,48 +194,36 @@
     gap: 20px;
     justify-content: space-between;
   }
-  .main-aside h1 {
-    font-size: 1.25rem;
-  }
-  .main-aside span {
-    font-size: 1rem;
-    line-height: 1;
-  }
   .main-aside span a {
     display: flex;
     align-items: center;
   }
+  .aside-container h1 {
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+  }
+  .aside-container span {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+  }
+  .main-home {
+    margin-top: 2rem;
+  }
+  .home-title {
+    margin-bottom: 2rem;
+  }
 }
 @media (max-width: 1300px) {
-  .home-title {
-    font-size: 2rem;
-  }
-  .home-title::before {
-    height: 2.5rem;
-  }
-  .main-banner-data p {
-    -webkit-line-clamp: 2;
-  }
   .main-aside {
     display: none;
   }
 }
 @media (max-width: 1150px) {
-  .home-title {
-    font-size: 1.8rem;
-  }
-  .home-title::before {
-    height: 2.3rem;
-  }
-  .main-banner-data h3 {
-    font-size: 1.2rem;
-  }
   .main-banner-data p {
     -webkit-line-clamp: 2;
-    font-size: 1.1rem;
   }
-  .main-banner-data .botao {
-    padding: 0.7rem 1.4rem;
-    font-size: 0.9rem;
+  .main-home {
+    margin-top: 1.5rem;
+  }
+  .home-title {
+    margin-bottom: 1.5rem;
   }
 }/*# sourceMappingURL=home.css.map */

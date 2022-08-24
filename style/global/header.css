@@ -157,4 +157,10 @@
   height: 2px;
   margin-bottom: 8px;
   background-image: var(--cor-g1);
+}
+
+@media (max-width: 1366px) {
+  .links-lista .font-menu {
+    font-size: clamp(1rem, 1.3vw, 1.25rem);
+  }
 }/*# sourceMappingURL=header.css.map */
