@@ -45,7 +45,7 @@
   box-sizing: border-box;
   border: 2px solid var(--cor-6);
   width: 100%;
-  max-width: 1000px;
+  aspect-ratio: 16/9;
   max-height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -59,9 +59,9 @@
   flex-direction: column;
   box-sizing: border-box;
   /* width: 38%; */
-  height: 32%;
+  height: 35%;
   padding: 8px 20px 8px 8px;
-  top: 65%;
+  top: 62%;
   left: 62%;
   background-color: rgba(255, 115, 0, 0.25);
   border-radius: 4px 0 0 4px;
