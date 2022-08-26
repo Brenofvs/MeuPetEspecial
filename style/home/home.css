@@ -45,6 +45,12 @@
   box-sizing: border-box;
   border: 2px solid var(--cor-6);
   width: 100%;
+  max-width: 1000px;
+  max-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .main-banner-data {
