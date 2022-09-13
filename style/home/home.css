@@ -1,15 +1,16 @@
 .main-home {
-  max-width: 1920px;
   box-sizing: border-box;
-  margin: auto 150px;
   margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
+  max-width: 1600px;
 }
 
 .main-section-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  gap: 2.5rem;
 }
 
 .home-title {
@@ -108,9 +109,7 @@
 
 /* aside menu */
 .main-aside {
-  width: 40%;
-  box-sizing: border-box;
-  margin-left: 2.5rem;
+  width: clamp(340px, 30vw, 420px);
 }
 
 .aside-container {
@@ -188,10 +187,10 @@
 }
 @media (max-width: 1366px) {
   .main-banner-data h3 {
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-size: clamp(1rem, 2vw, 1.75rem);
   }
   .main-banner-data p {
-    font-size: clamp(1rem, 1.3vw, 1.25rem);
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
     -webkit-line-clamp: 3;
   }
   .main-section-container {
@@ -221,6 +220,15 @@
   }
   .home-title {
     margin-bottom: 2rem;
+  }
+  .main-section {
+    max-width: 100%;
+  }
+  .picture {
+    justify-content: space-between;
+  }
+  .main-banner img {
+    max-height: 800px;
   }
 }
 @media (max-width: 1300px) {
