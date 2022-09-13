@@ -254,18 +254,23 @@
 }
 
 .cards {
-  background-color: var(--cor-3);
-  width: 560px;
-  height: 520px;
-  border: solid 1px var(--cor-p1);
-  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
 
 .card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background-color: var(--cor-3);
+  border: solid 1px var(--cor-p1);
+  border-radius: 5px;
   max-width: 100%;
   max-height: 100%;
+  width: 560px;
+  height: 520px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .card h1, .card p, .card a {
