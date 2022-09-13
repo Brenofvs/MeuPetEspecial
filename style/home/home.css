@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main-home {
   box-sizing: border-box;
   margin-top: 2.5rem;
@@ -19,7 +20,6 @@
   justify-content: flex-start;
   text-transform: capitalize;
   margin-bottom: 2.5rem;
-  font-size: clamp(1.5rem, 2.5vw, 3rem);
 }
 
 .home-title::before {
@@ -246,4 +246,75 @@
   .home-title {
     margin-bottom: 1.5rem;
   }
+}
+/* Matérias */
+.materias-title {
+  margin-top: 5rem;
+  max-width: 1600px;
+}
+
+.cards {
+  background-color: var(--cor-3);
+  width: 560px;
+  height: 520px;
+  border: solid 1px var(--cor-p1);
+  border-radius: 5px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card h1, .card p, .card a {
+  margin: 0 40px;
+}
+
+.card h1 {
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin-bottom: 0.5rem;
+}
+
+.card img {
+  margin-bottom: 1.25rem;
+  width: 100%;
+  grid-column: 1/-1;
+  border-radius: 5px 5px 0 0;
+}
+
+.pet-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-transform: capitalize;
+  grid-column: 1/-1;
+}
+
+.pet-title::before {
+  content: "";
+  display: block;
+  width: 0.25rem;
+  height: 2vw;
+  background-image: var(--cor-g1);
+  margin-right: 0.25rem;
+}
+
+.pet-desc {
+  grid-column: 1/-1;
+}
+
+.botao-pet {
+  padding: clamp(0.4rem, 0.5vw, 0.8rem) clamp(0.5rem, 1vw, 1rem);
+  font-size: clamp(0.6rem, 1vw, 1rem) !important;
+  font-weight: 600;
+  grid-column: 2;
+  justify-self: end;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }/*# sourceMappingURL=home.css.map */
