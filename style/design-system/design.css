@@ -200,7 +200,7 @@
 
 .font-text-sm {
   font: 400 1rem/1.25 "Roboto", sans-serif;
-  font-size: clamp(0.5rem, 0.85vw, 1rem);
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 /* @media (max-width: 1200px) {
