@@ -1,0 +1,25 @@
+.materia-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 100%;
+  background-color: var(--cor-2);
+}
+
+.materias-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-transform: capitalize;
+}
+
+.materias-title::before {
+  content: "";
+  display: block;
+  width: 0.25rem;
+  height: 4vw;
+  background-image: var(--cor-g1);
+  margin-right: 0.25rem;
+}/*# sourceMappingURL=materias.css.map */

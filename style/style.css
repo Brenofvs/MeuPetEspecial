@@ -7,3 +7,7 @@
 
 /* Home */
 @import url(./home/home.css);
+
+/* Matérias */
+
+@import url(./materias/materias.css);
