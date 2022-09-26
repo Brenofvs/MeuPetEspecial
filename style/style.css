@@ -9,5 +9,7 @@
 @import url(./home/home.css);
 
 /* Matérias */
-
 @import url(./materias/materias.css);
+
+/* Quem Somos */
+@import url(./quem-somos/quem-somos.css);

@@ -1,0 +1,42 @@
+.main-section-about {
+  background-color: var(--cor-2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.main-banner-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  max-width: 800px;
+}
+
+.main-banner-about img {
+  margin-bottom: 2.5rem;
+}
+
+.main-banner-about p {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 2.5rem;
+  text-indent: clamp(15px, 1.5vw, 30px);
+}
+
+.main-banner-about p::before {
+  content: "";
+  display: block;
+  width: clamp(12px, 1vw, 20px);
+  height: clamp(8px, 0.7vw, 12px);
+  background: var(--cor-g1);
+  position: absolute;
+  top: 4px;
+}/*# sourceMappingURL=quem-somos.css.map */

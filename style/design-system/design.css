@@ -195,7 +195,7 @@
 
 .font-text-m {
   font: 400 1.25rem/1.2 "Roboto", sans-serif;
-  font-size: clamp(0.62rem, 1vw, 1.25rem);
+  font-size: clamp(0.9rem, 1vw, 1.25rem);
 }
 
 .font-text-sm {
