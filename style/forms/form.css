@@ -1,0 +1,71 @@
+.form {
+  background-color: var(--cor-2);
+}
+
+.form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.form form label {
+  display: block;
+  font-weight: 600;
+  font-size: clamp(0.8rem, 1.2vw, 1.25rem);
+  margin-bottom: 4px;
+}
+.form form input::-moz-placeholder, .form form textarea::-moz-placeholder {
+  color: var(--cor-7);
+}
+.form form input:-ms-input-placeholder, .form form textarea:-ms-input-placeholder {
+  color: var(--cor-7);
+}
+.form form input::placeholder,
+.form form textarea::placeholder {
+  color: var(--cor-7);
+}
+.form form input[type=text],
+.form form input[type=email],
+.form form textarea,
+.form form select {
+  color: var(--cor-7);
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: clamp(0.7rem, 1vw, 1rem);
+  background: var(--cor-1);
+  border: 1px solid var(--cor-2);
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff7ee;
+}
+.form form .idadePet, .form form .sexPet {
+  width: clamp(100px, 25%, 170px);
+}
+.form form input[type=text]:focus,
+.form form input[type=email]:focus,
+.form form textarea:focus,
+.form form select:focus {
+  outline: none;
+  border-color: var(--cor-p1);
+  background: #fffefc;
+}
+.form form textarea {
+  height: 8vw;
+}
+
+.selects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.col {
+  grid-column: span 2;
+}
+
+button.botao {
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(0.8rem, 1vw, 1rem) !important;
+}/*# sourceMappingURL=form.css.map */

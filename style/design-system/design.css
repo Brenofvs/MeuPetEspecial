@@ -126,6 +126,8 @@
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+  border: none;
+  cursor: pointer;
   transition: 0.3s;
 }
 
