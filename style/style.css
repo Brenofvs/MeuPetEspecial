@@ -15,4 +15,7 @@
 @import url(./quem-somos/quem-somos.css);
 
 /* Contato */
-@import url(./contato/contato.css);
+@import url(./forms/historia.css);
+
+/* form */
+@import url(./forms/form.css);
