@@ -6,7 +6,7 @@
                 <div class="main-banner">
                     <img id="main-banner" src="./imagens/pets/pet07.png" alt="">
                     <div class="main-banner-data">
-                        <div class="main-banner-container">
+                        <div id="main-banner-data" class="main-banner-container">
                             <h3 class="font-menu cor-11">Nome do Pet</h3>
                             <p class="font-text-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
                                 aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
@@ -108,6 +108,6 @@
                 <a href="#" class="botao botao-pet">Leia Mais...</a>
             </div>
         </div>
-        <a href="#" class="botao botao-mais">Outras matérias</a>
+        <a href="materias" class="botao botao-mais">Outras matérias</a>
     </div>
 </section>

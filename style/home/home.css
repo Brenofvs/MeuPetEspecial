@@ -1,4 +1,97 @@
 @charset "UTF-8";
+.hide {
+  -webkit-animation: hide 1s forwards;
+          animation: hide 1s forwards;
+}
+
+.show {
+  -webkit-animation: show 1.5s forwards;
+          animation: show 1.5s forwards;
+}
+
+.fadeout {
+  -webkit-animation: fadeout 1s forwards;
+          animation: fadeout 1s forwards;
+}
+
+.fadein {
+  -webkit-animation: fadein 1.5s forwards;
+          animation: fadein 1.5s forwards;
+}
+
+@-webkit-keyframes hide {
+  from {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+}
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .main-home {
   box-sizing: border-box;
   margin-top: 2.5rem;
@@ -56,16 +149,21 @@
 
 .main-banner-data {
   position: absolute;
+  /* width: 38%; */
+  height: 35%;
+  top: 62%;
+  left: 62%;
+}
+.main-banner-data .main-banner-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 115, 0, 0.25);
+  border-radius: 4px 0 0 4px;
+  padding: 8px 20px 8px 8px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  /* width: 38%; */
-  height: 35%;
-  padding: 8px 20px 8px 8px;
-  top: 62%;
-  left: 62%;
-  background-color: rgba(255, 115, 0, 0.25);
-  border-radius: 4px 0 0 4px;
+  overflow: hidden;
 }
 .main-banner-data h3 {
   margin-bottom: 4px;
