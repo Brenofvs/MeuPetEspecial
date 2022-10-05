@@ -49,7 +49,7 @@
                             <a href="quem-somos">Quem somos</a>
                         </li>
                         <li class="font-menu">
-                            <a href="contatos">Contato</a>
+                            <a href="contato">Contato</a>
                         </li>
                     </ul>
                 </div>

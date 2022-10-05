@@ -50,4 +50,26 @@
 }
 .content img {
   margin-bottom: 2.5rem;
+}
+
+.endereco, .contato-email, .contato-telefone {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.endereco span, .endereco a, .contato-email span, .contato-email a, .contato-telefone span, .contato-telefone a {
+  margin-bottom: 1rem;
+}
+
+.smc {
+  width: 100%;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  margin-top: 1rem;
+}
+
+.ccs {
+  padding: clamp(40px, 5vw, 80px);
+  justify-content: flex-start;
 }/*# sourceMappingURL=historia.css.map */
