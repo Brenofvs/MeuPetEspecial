@@ -34,8 +34,6 @@
         </div>
     </div>
 </footer>
-
-<script src="./scripts/home-main-slider.js"></script>
 </body>
 
 </html>

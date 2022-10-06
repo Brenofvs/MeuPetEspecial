@@ -111,3 +111,5 @@
         <a href="materias" class="botao botao-mais">Outras matérias</a>
     </div>
 </section>
+
+<script src="./scripts/home-main-slider.js"></script>
