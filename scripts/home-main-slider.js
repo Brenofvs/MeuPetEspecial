@@ -37,12 +37,12 @@ function slideChange() {
 
 function interval() {
 	t++;
-	if (t === 2) {
+	if (t === 10) {
 		slideChange();
 	}
 }
 
-setInterval(interval, 5000);
+setInterval(interval, 1000);
 
 function callAnimation() {
 	mainBannerData.classList.add("hide");
