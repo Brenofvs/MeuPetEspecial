@@ -203,6 +203,16 @@
      object-fit: cover;
   box-sizing: border-box;
   border: 1px solid var(--cor-p5);
+  transition: ease 0.8s;
+}
+
+.pic-mask img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.pic-mask img.border {
+  border: 2px solid var(--cor-p1);
 }
 
 /* aside menu */

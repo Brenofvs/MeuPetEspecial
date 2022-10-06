@@ -19,7 +19,7 @@
                 <div class="picture">
 
                     <div class="pic-mask">
-                        <img class="pic-thumb" src="./imagens/pets/pet07.png" alt="">
+                        <img class="pic-thumb border" src="./imagens/pets/pet07.png" alt="">
                     </div>
 
                     <div class="pic-mask">
