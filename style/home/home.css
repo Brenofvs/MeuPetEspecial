@@ -213,6 +213,7 @@
 
 .pic-mask img.border {
   border: 2px solid var(--cor-p1);
+  transform: scale(1.05);
 }
 
 /* aside menu */
