@@ -1,4 +1,4 @@
-<main id="home">
+<main id="home" class="load-animation">
     <div class="main-home container-body">
         <h1 class="home-title font-title-xl">Últimas Matérias</h1>
         <div class="main-section-container">
@@ -40,7 +40,7 @@
 
                 </div>
             </div>
-            <aside class="main-aside">
+            <aside id="aside" class="main-aside">
                 <div class="aside-container">
                     <h1 class="font-title-m">categorias</h1>
                     <a class="font-menu" href="#"><span class="dec">Histórias de leitores</span></a>
@@ -64,7 +64,7 @@
     </div>
 </main>
 
-<section>
+<section class="js-scroll">
     <div class="home-materias-title container-body">
         <p class="font-text-m cor-8">Buscando ajuda? Confira nossas matérias</p>
         <h1 class="home-title font-title-xl">Mais Visitadas</h1>

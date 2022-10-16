@@ -34,6 +34,8 @@
         </div>
     </div>
 </footer>
+
+<script src="./scripts/onload-animation.js"></script>
 </body>
 
 </html>

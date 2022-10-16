@@ -467,107 +467,36 @@
 		grid-template-columns: repeat(2, 1fr);
 	}
 } */
-/* Footer */
-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--cor-4);
-  padding: 20px 0;
-  box-sizing: border-box;
+/* Animações */
+.load-animation {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: 1s;
 }
 
-.footer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.footer .links-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: clamp(300px, 30vw, 500px);
-}
-.footer .links-footer .linksf {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(10px, 1vw, 20px);
-}
-.footer .links-footer .linksf a {
-  font-weight: 500;
-}
-.footer .links-footer .linksf a::after {
-  content: "";
-  display: block;
-  background: var(--cor-g1);
-  width: 30%;
-  height: 2px;
-  transition: ease 0.3s;
-}
-.footer .links-footer .linksf a:hover::after {
-  width: 60%;
+.load-animation.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
-.social-media-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(5px, 0.5vw, 10px);
-}
-.social-media-footer .social-icons {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: clamp(20px, 2vw, 40px);
+.js-scroll {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: 1s;
 }
 
-.detalhe {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding-top: 20px;
+.js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
-.detalhe::before {
-  content: "";
-  display: block;
-  width: clamp(300px, 45vw, 900px);
-  height: 2px;
-  background: var(--cor-g1);
+.main-aside {
+  opacity: 0;
+  transform: translate3d(50px, 0, 0);
+  transition: 1s;
 }
 
-.detalhe::after {
-  content: "";
-  display: block;
-  width: clamp(300px, 45vw, 900px);
-  height: 2px;
-  background: var(--cor-g1);
-}
-
-.copyright {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: 100%;
-  margin-top: 20px;
-}
-.copyright span {
-  display: block;
-  color: var(--cor-8);
-  flex: 1;
-}
-.copyright span a {
-  color: var(--cor-12);
-  text-decoration: underline;
-  -webkit-text-decoration-color: var(--cor-p5);
-          text-decoration-color: var(--cor-p5);
+.main-aside.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }/*# sourceMappingURL=home.css.map */
