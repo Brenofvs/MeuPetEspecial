@@ -11,7 +11,7 @@
                     </div>
                 </div>
             </div>
-            <aside class="main-aside">
+            <aside id="aside" class="main-aside">
                 <div class="aside-container">
                     <h1 class="font-title-m">categorias</h1>
                     <a class="font-menu" href="#"><span class="dec">Histórias de leitores</span></a>

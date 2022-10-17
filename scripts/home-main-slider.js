@@ -100,6 +100,7 @@ function callAnimation() {
 
 	//adicionar classe da animação fadeOut após 1s na imagem
 	setTimeout(() => {
+		mainBannerData.classList.add("fadeout-data");
 		mainBanner.classList.add("fadeout");
 	}, 1000);
 
@@ -107,6 +108,10 @@ function callAnimation() {
 	setTimeout(() => {
 		mainBanner.classList.add("fadein");
 	}, 2000);
+
+	setTimeout(() => {
+		mainBannerData.classList.add("fadein-data");
+	}, 2600);
 
 	//adicionar classe da animação para exibir conteúdo da matéria após 3s
 	setTimeout(() => {
@@ -117,6 +122,8 @@ function callAnimation() {
 	setTimeout(() => {
 		mainBanner.classList.remove("fadeout");
 		mainBanner.classList.remove("fadein");
+		mainBannerData.classList.remove("fadein-data");
+		mainBannerData.classList.remove("fadeout-data");
 		mainBannerData.classList.remove("hide");
 		mainBannerData.classList.remove("show");
 	}, 5000);

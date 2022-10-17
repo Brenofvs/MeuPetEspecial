@@ -164,64 +164,64 @@
 }
 /* Tipografia */
 .font-title-xl {
-  font: 600 3rem/1.35 "Poppins", sans-serif;
-  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font: 600 clamp(1.5rem, 2.5vw, 3rem)/1.35 "Poppins", sans-serif;
 }
 
 .font-title-m {
-  font: 600 1.5rem/1.33 "Poppins", sans-serif;
-  font-size: clamp(0.75rem, 1.3vw, 1.5rem);
+  font: 600 clamp(0.75rem, 1.3vw, 1.5rem)/1.33 "Poppins", sans-serif;
   text-transform: uppercase;
 }
 
 .font-subtitle {
-  font: 600 1.5rem/1.2 "Poppins", sans-serif;
-  font-size: clamp(0.75rem, 1.3vw, 1.5rem);
+  font: 600 clamp(0.75rem, 1.3vw, 1.5rem)/1.2 "Poppins", sans-serif;
 }
 
 .font-menu {
-  font: 600 1.25rem/1.4 "Poppins", sans-serif;
-  font-size: clamp(0.8rem, 1.2vw, 1.25rem);
+  font: 600 clamp(0.8rem, 1.2vw, 1.25rem)/1.4 "Poppins", sans-serif;
 }
 
 .font-info {
-  font: 400 1rem/1.25 "Poppins", sans-serif;
-  font-size: clamp(0.62rem, 1vw, 1.25rem);
+  font: 400 clamp(0.62rem, 1vw, 1.25rem)/1.25 "Poppins", sans-serif;
   text-transform: capitalize;
 }
 
 .font-text-l {
-  font: 400 1.75rem/1.2 "Roboto", sans-serif;
-  font-size: clamp(0.85rem, 1.5vw, 1.75rem);
+  font: 400 clamp(0.85rem, 1.5vw, 1.75rem)/1.2 "Roboto", sans-serif;
 }
 
 .font-text-m {
-  font: 400 1.25rem/1.2 "Roboto", sans-serif;
-  font-size: clamp(0.9rem, 1vw, 1.25rem);
+  font: 400 clamp(0.9rem, 1vw, 1.25rem)/1.2 "Roboto", sans-serif;
 }
 
 .font-text-sm {
-  font: 400 1rem/1.25 "Roboto", sans-serif;
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font: 400 clamp(0.8rem, 1vw, 1rem)/1.25 "Roboto", sans-serif;
 }
 
-/* @media (max-width: 1200px) {
-	.font-title-xl {
-	font: 600 2rem/1.35 "Poppins", sans-serif;
-}
-
-.font-title-m {
-	font: 600 1rem/1.33 "Poppins", sans-serif;
-	text-transform: uppercase;
-}
-}
-
-@media (max-width: 800px) {
-	.font-1-xxl {
-		font-size: 2rem;
-	}
-	.font-1-xl,
-	.font-2-xl {
-		font-size: 1.5rem;
-	}
-} *//*# sourceMappingURL=design.css.map */
+@media (max-width: 1000px) {
+  .font-title-xl {
+    font: 600 clamp(1rem, 4vw, 2rem)/1.35 "Poppins", sans-serif !important;
+  }
+  .font-title-m {
+    font: 600 clamp(0.5rem, 2vw, 1rem)/1.33 "Poppins", sans-serif !important;
+    text-transform: uppercase;
+  }
+  .font-subtitle {
+    font: 600 clamp(0.5rem, 2vw, 1rem)/1.2 "Poppins", sans-serif !important;
+  }
+  .font-menu {
+    font: 600 clamp(0.4rem, 2vw, 0.9rem)/1.4 "Poppins", sans-serif !important;
+  }
+  .font-info {
+    font: 400 clamp(0.3rem, 1.5vw, 0.75rem)/1.25 "Poppins", sans-serif !important;
+    text-transform: capitalize;
+  }
+  .font-text-l {
+    font: 400 clamp(0.4rem, 2vw, 1rem)/1.2 "Roboto", sans-serif !important;
+  }
+  .font-text-m {
+    font: 400 clamp(0.5rem, 1.5vw, 0.9rem)/1.2 "Roboto", sans-serif !important;
+  }
+  .font-text-sm {
+    font: 400 clamp(0.4rem, 1.2vw, 0.6rem)/1.25 "Roboto", sans-serif !important;
+  }
+}/*# sourceMappingURL=design.css.map */
