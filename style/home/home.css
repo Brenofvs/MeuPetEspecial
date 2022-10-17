@@ -147,6 +147,11 @@
      object-position: center;
 }
 
+#arrowLeft,
+#arrowRight {
+  display: none;
+}
+
 .main-banner-data {
   position: absolute;
   /* width: 38%; */

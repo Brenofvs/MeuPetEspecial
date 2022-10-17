@@ -138,11 +138,15 @@ function callAnimation() {
 	}, 800);
 	setTimeout(() => {
 		mainBanner.classList.add("fadeout");
+		arrowLeft.classList.add("fadeout");
+		arrowRight.classList.add("fadeout");
 	}, 1000);
 
 	//adicionar classe da animação fadeIn após 2s na imagem
 	setTimeout(() => {
 		mainBanner.classList.add("fadein");
+		arrowLeft.classList.add("fadein");
+		arrowRight.classList.add("fadein");
 	}, 2000);
 
 	setTimeout(() => {
@@ -162,5 +166,9 @@ function callAnimation() {
 		mainBannerData.classList.remove("fadeout-data");
 		mainBannerData.classList.remove("hide");
 		mainBannerData.classList.remove("show");
+		arrowLeft.classList.remove("fadein");
+		arrowRight.classList.remove("fadein");
+		arrowLeft.classList.remove("fadeout");
+		arrowRight.classList.remove("fadeout");
 	}, 5000);
 }
