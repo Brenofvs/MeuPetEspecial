@@ -36,6 +36,7 @@
 </footer>
 
 <script src="./scripts/onload-animation.js"></script>
+<script src="./scripts/header-mobile-menu.js"></script>
 </body>
 
 </html>

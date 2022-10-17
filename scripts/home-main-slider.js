@@ -1,12 +1,18 @@
 const pics = document.querySelectorAll(".pic-thumb");
 const mainBanner = document.getElementById("main-banner");
 const mainBannerData = document.getElementById("main-banner-data");
+const arrowLeft = document.getElementById("arrowLeft");
+const arrowRight = document.getElementById("arrowRight");
 
 //variável para saber o array da imagem
 let i = 0;
 
 //variável de tempo
 let t = 0;
+
+arrowLeft.addEventListener("click", slideReverse)
+
+arrowRight.addEventListener("click", slideChange)
 
 /* Função responsável por trocar a imagem que foi clicada */
 
@@ -68,6 +74,34 @@ function slideChange() {
 	t = 0;
 }
 
+function slideReverse() {
+	//variável i responsável por incrementar o valor do array das imagens
+	i--;
+	if (i < 0) {
+		//se o valor de i for maior que o último valor do array das imagens i volta a 0 (primeira imagem)
+		i = pics.length - 1;
+	}
+
+	//variável que armazena o src da imagem da vez
+	let slideSrc = pics[i].src;
+
+	//variável que armazena a imagem selecionada da vez
+	let selectedPic = pics[i];
+
+	//chama função de animação
+	callAnimation();
+
+	//define tempo suficiente para a animação ocorrer antes de executar as próximas tarefas
+	setTimeout(() => {
+		//executar função para trocar a borda da imagem selecionada
+		changeBorder(selectedPic);
+		//trocar o src da imagem principal
+		mainBanner.src = slideSrc;
+	}, 2000);
+	//voltar a variável que conta o tempo para 0
+	t = 0;
+}
+
 /* Função responsável por calcular o intervalo de tempo para troca dos slides */
 
 function interval() {
@@ -101,6 +135,8 @@ function callAnimation() {
 	//adicionar classe da animação fadeOut após 1s na imagem
 	setTimeout(() => {
 		mainBannerData.classList.add("fadeout-data");
+	}, 800);
+	setTimeout(() => {
 		mainBanner.classList.add("fadeout");
 	}, 1000);
 
@@ -111,12 +147,12 @@ function callAnimation() {
 
 	setTimeout(() => {
 		mainBannerData.classList.add("fadein-data");
-	}, 2600);
+	}, 2900);
 
 	//adicionar classe da animação para exibir conteúdo da matéria após 3s
 	setTimeout(() => {
 		mainBannerData.classList.add("show");
-	}, 3000);
+	}, 3500);
 
 	//remover todas as classes após 5s
 	setTimeout(() => {

@@ -513,12 +513,12 @@
             animation: hide 1s forwards;
   }
   .fadeout-data {
-    -webkit-animation: fadeout-data 0.5s forwards;
-            animation: fadeout-data 0.5s forwards;
+    -webkit-animation: fadeout-data 0.6s forwards;
+            animation: fadeout-data 0.6s forwards;
   }
   .fadein-data {
-    -webkit-animation: fadein-data 0.8s forwards;
-            animation: fadein-data 0.8s forwards;
+    -webkit-animation: fadein-data 0.4s forwards;
+            animation: fadein-data 0.4s forwards;
   }
   .show {
     -webkit-animation: show 1.5s forwards;
@@ -604,8 +604,8 @@
     border-bottom: none;
     border-radius: 4px 4px 0 0;
   }
-  .main-banner::before,
-.main-banner::after {
+  #arrowLeft,
+#arrowRight {
     width: 40px;
     height: 40px;
     display: flex;
@@ -614,18 +614,22 @@
     position: absolute;
     z-index: 2;
   }
-  .main-banner::before {
-    content: url(../../imagens/dec/seta-left.svg);
+  #arrowLeft img,
+#arrowRight img {
+    border: none;
+    width: 8px;
+    height: 16px;
+  }
+  #arrowLeft {
     top: 50%;
     left: 3%;
   }
-  .main-banner::after {
-    content: url(../../imagens/dec/seta-right.svg);
+  #arrowRight {
     top: 50%;
     right: 3%;
   }
   .main-banner-data {
-    z-index: -1;
+    z-index: -1 !important;
     width: 100%;
     height: 55%;
     top: 100%;
@@ -672,10 +676,11 @@
     grid-column: 1/1;
     width: 100%;
     height: 100%;
+    border-radius: 4px 0 0 4px;
   }
   .card h1 {
     margin: 0;
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
     grid-row: 1;
     grid-column: 2;
     justify-self: start;
@@ -686,7 +691,7 @@
     margin: 0;
     grid-row: 2/5;
     grid-column: 2/4;
-    font-size: clamp(0.75rem, 2.5vw, 1rem) !important;
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
   }
   .card .botao {
     max-height: 10%;
@@ -694,19 +699,26 @@
     grid-row: 4/4;
     justify-self: end;
     align-self: end;
-    margin: clamp(20px, 2vw, 40px);
-  }
-  header,
-footer {
-    display: none;
+    margin: clamp(8px, 2vw, 40px);
   }
 }
 @media (max-width: 420px) {
-  .main-banner-container p {
-    -webkit-line-clamp: 2;
+  .main-banner-container h3 {
+    font-size: clamp(0.25rem, 2vw, 0.5rem) !important;
   }
-  header,
-footer {
-    display: none;
+  .main-banner-container p {
+    font-size: clamp(0.25rem, 2vw, 0.5rem) !important;
+    -webkit-line-clamp: 3;
+  }
+  .main-banner-container .botao {
+    margin-top: 8px;
+    padding: clamp(0.4rem, 2vw, 1rem) clamp(0.5rem, 2.5vw, 1rem) !important;
+    font-size: clamp(0.4rem, 2vw, 1rem) !important;
+  }
+  .card p {
+    font-size: clamp(0.25rem, 3vw, 0.75rem);
+  }
+  .cards {
+    padding: 8px;
   }
 }/*# sourceMappingURL=home.css.map */

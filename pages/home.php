@@ -4,7 +4,9 @@
         <div class="main-section-container">
             <div class="main-section">
                 <div class="main-banner">
+                    <span id="arrowLeft"><img src="./imagens/dec/seta-left.svg" alt=""></span>
                     <img id="main-banner" src="./imagens/pets/pet07.png" alt="">
+                    <span id="arrowRight"><img src="./imagens/dec/seta-right.svg" alt=""></span>
                     <div id="main-banner-data" class="main-banner-data">
                         <div class="main-banner-container">
                             <h3 class="font-menu cor-11">Nome do Pet</h3>
