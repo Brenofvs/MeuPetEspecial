@@ -513,8 +513,8 @@
             animation: hide 1s forwards;
   }
   .fadeout-data {
-    -webkit-animation: fadeout-data 0.8s forwards;
-            animation: fadeout-data 0.8s forwards;
+    -webkit-animation: fadeout-data 0.5s forwards;
+            animation: fadeout-data 0.5s forwards;
   }
   .fadein-data {
     -webkit-animation: fadein-data 0.8s forwards;
@@ -526,78 +526,78 @@
   }
   @-webkit-keyframes hide {
     from {
-      transform: translate3d(0, 0, 0);
+      top: 100%;
     }
     to {
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
   }
   @keyframes hide {
     from {
-      transform: translate3d(0, 0, 0);
+      top: 100%;
     }
     to {
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
   }
   @-webkit-keyframes fadeout-data {
     from {
       opacity: 1;
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
     to {
       opacity: 0;
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
   }
   @keyframes fadeout-data {
     from {
       opacity: 1;
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
     to {
       opacity: 0;
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
   }
   @-webkit-keyframes fadein-data {
     from {
       opacity: 0;
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
     to {
       opacity: 1;
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
   }
   @keyframes fadein-data {
     from {
       opacity: 0;
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
     to {
       opacity: 1;
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
   }
   @-webkit-keyframes show {
     from {
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
     to {
-      transform: translate3d(0, 0, 0);
+      top: 100%;
     }
   }
   @keyframes show {
     from {
-      transform: translate3d(0, -92px, 0);
+      top: 45.8%;
     }
     to {
-      transform: translate3d(0, 0, 0);
+      top: 100%;
     }
   }
   #home {
-    margin-bottom: 100px;
+    margin-bottom: clamp(120px, 35vw, 15rem);
   }
   .main-banner img {
     position: relative;
@@ -627,7 +627,7 @@
   .main-banner-data {
     z-index: -1;
     width: 100%;
-    height: 45%;
+    height: 55%;
     top: 100%;
     left: 0;
   }
@@ -641,10 +641,17 @@
 .main-banner-container p {
     margin: 0;
   }
+  .main-banner-container h3 {
+    font-size: clamp(0.5rem, 3.5vw, 1.3rem) !important;
+  }
+  .main-banner-container p {
+    font-size: clamp(0.5rem, 3.5vw, 1.3rem) !important;
+    -webkit-line-clamp: 3;
+  }
   .botao {
     margin-top: 8px;
-    padding: clamp(0.4rem, 1.5vw, 0.7rem) clamp(0.6rem, 2vw, 0.8rem) !important;
-    font-size: clamp(0.4rem, 1.2vw, 0.7rem) !important;
+    padding: clamp(0.6rem, 2vw, 1rem) clamp(0.6rem, 2.5vw, 1rem) !important;
+    font-size: clamp(0.5rem, 2vw, 1rem) !important;
   }
   .cards {
     grid-template-columns: 1fr;
@@ -695,11 +702,8 @@ footer {
   }
 }
 @media (max-width: 420px) {
-  #home {
-    margin-bottom: 100px;
-  }
-  .main-banner-data {
-    height: 45%;
+  .main-banner-container p {
+    -webkit-line-clamp: 2;
   }
   header,
 footer {
