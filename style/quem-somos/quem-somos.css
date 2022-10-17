@@ -20,6 +20,8 @@
 
 .main-banner-about img {
   margin-bottom: 2.5rem;
+  border: 2px solid var(--cor-6) !important;
+  border-radius: 4px !important;
 }
 
 .main-banner-about p {
@@ -39,4 +41,14 @@
   background: var(--cor-g1);
   position: absolute;
   top: 4px;
+}
+
+.about-main {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .main-banner-about p::before {
+    top: 1px !important;
+  }
 }/*# sourceMappingURL=quem-somos.css.map */

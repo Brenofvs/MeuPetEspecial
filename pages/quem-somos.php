@@ -1,4 +1,4 @@
-<main id="home">
+<main id="home" class="about-main">
     <div class="main-home container-body">
         <div class="main-section-container">
             <div class="main-section main-section-about">

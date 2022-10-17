@@ -706,6 +706,10 @@
     align-self: end;
     margin: clamp(8px, 2vw, 40px);
   }
+  .links-lista .font-menu:nth-child(2),
+.links-lista .font-menu:nth-child(4) {
+    display: none;
+  }
 }
 @media (max-width: 420px) {
   .main-banner-container h3 {
