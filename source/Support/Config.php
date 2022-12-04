@@ -20,7 +20,7 @@ define("CONF_URL_ERROR", CONF_URL_BASE . "/404");
  */
 define("CONF_SITE_NAME", "MeuPetEspecial");
 define("CONF_SITE_LANG", "pt_BR");
-define("CONF_SITE_DOMAIN", "upinside.com.br");
+define("CONF_SITE_DOMAIN", "localhost/MesPetEspecial");
 
 /**
  * SOCIAL

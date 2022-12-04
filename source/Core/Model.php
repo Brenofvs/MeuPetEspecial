@@ -20,9 +20,9 @@ abstract class Model
     /** @var Message|null */
     protected $message;
 
-    static $safe;
+    protected static $safe;
 
-    static $required;
+    protected static $required;
 
     /**
      * Model constructor.

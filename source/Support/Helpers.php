@@ -279,11 +279,3 @@ function session(): \Source\Core\Session
  * ###   MODEL   ###
  * #################
  */
-
-/**
- * @return \Source\Models\User
- */
-function user(): \Source\Models\User
-{
-    return new \Source\Models\User();
-}

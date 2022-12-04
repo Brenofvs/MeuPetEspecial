@@ -9,37 +9,31 @@ use Source\Core\Model;
  * @author Brenofvs <brenofvs.consultoria@gmail.com>
  * @package Source\Models
  */
-class User extends Model
+class Post extends Model
 {
     /** @var array $safe no update or create */
     protected static $safe = ["id", "created_at", "updated_at"];
 
     /** @var string $entity database table */
-    protected static $entity = "users";
+    protected static $entity = "posts";
 
     /** @var array $required table fileds */
-    protected static $required = ["first_name", "last_name", "email", "password"];
+    protected static $required = ["title", "body", "image"];
 
     /**
-     * @param string $firstName
-     * @param string $lastName
-     * @param string $email
-     * @param string $password
-     * @param string|null $document
-     * @return User
+     * @param string $title
+     * @param string $body
+     * @param string $image
+     * @return Post
      */
     public function bootstrap(
-        string $firstName,
-        string $lastName,
-        string $email,
-        string $password,
-        string $document = null
-    ): User {
-        $this->first_name = $firstName;
-        $this->last_name = $lastName;
-        $this->email = $email;
-        $this->password = $password;
-        $this->document = $document;
+        string $title,
+        string $body,
+        string $image,
+    ): Post {
+        $this->title = $title;
+        $this->body = $body;
+        $this->image = $image;
         return $this;
     }
 
@@ -47,9 +41,9 @@ class User extends Model
      * @param string $terms
      * @param string $params
      * @param string $columns
-     * @return null|User
+     * @return null|Post
      */
-    public function find(string $terms, string $params, string $columns = "*"): ?User
+    public function find(string $terms, string $params, string $columns = "*"): ?Post
     {
         $find = $this->read("SELECT {$columns} FROM " . self::$entity . " WHERE {$terms}", $params);
         if ($this->fail() || !$find->rowCount()) {
@@ -61,9 +55,9 @@ class User extends Model
     /**
      * @param int $id
      * @param string $columns
-     * @return null|User
+     * @return null|Post
      */
-    public function findById(int $id, string $columns = "*"): ?User
+    public function findById(int $id, string $columns = "*"): ?Post
     {
         return $this->find("id = :id", "id={$id}", $columns);
     }
@@ -71,11 +65,11 @@ class User extends Model
     /**
      * @param $email
      * @param string $columns
-     * @return null|User
+     * @return null|Post
      */
-    public function findByEmail($email, string $columns = "*"): ?User
+    public function findByTitle($title, string $columns = "*"): ?Post
     {
-        return $this->find("email = :email", "email={$email}", $columns);
+        return $this->find("title = :title", "title={$title}", $columns);
     }
 
     /**
@@ -98,39 +92,25 @@ class User extends Model
     }
 
     /**
-     * @return null|User
+     * @return null|Post
      */
-    public function save(): ?User
+    public function save(): ?Post
     {
         if (!$this->required()) {
-            $this->message->warning("Nome, sobrenome, email e senha são obrigatórios");
+            $this->message->warning("Você precisa preencher todos os campos!");
             return null;
-        }
-
-        if (!is_email($this->email)) {
-            $this->message->warning("O e-mail informado não tem um formato válido");
-            return null;
-        }
-
-        if (!is_passwd($this->password)) {
-            $min = CONF_PASSWD_MIN_LEN;
-            $max = CONF_PASSWD_MAX_LEN;
-            $this->message->warning("A senha deve ter entre {$min} e {$max} caracteres");
-            return null;
-        } else {
-            $this->password = passwd($this->password);
         }
 
         /** User Update */
         if (!empty($this->id)) {
-            $userId = $this->id;
+            $postId = $this->id;
 
-            if ($this->find("email = :e AND id != :i", "e={$this->email}&i={$userId}")) {
-                $this->message->warning("O e-mail informado já está cadastrado");
+            if ($this->find("title = :t AND id != :i", "e={$this->title}&i={$postId}")) {
+                $this->message->warning("Uma postagem com este título já está cadastrada");
                 return null;
             }
 
-            $this->update(self::$entity, $this->safe(), "id = :id", "id={$userId}");
+            $this->update(self::$entity, $this->safe(), "id = :id", "id={$postId}");
             if ($this->fail()) {
                 $this->message->error("Erro ao atualizar, verifique os dados");
                 return null;
@@ -139,26 +119,26 @@ class User extends Model
 
         /** User Create */
         if (empty($this->id)) {
-            if ($this->findByEmail($this->email)) {
-                $this->message->warning("O e-mail informado já está cadastrado");
+            if ($this->findByTitle($this->title)) {
+                $this->message->warning("Uma postagem com este título já está cadastrada!");
                 return null;
             }
 
-            $userId = $this->create(self::$entity, $this->safe());
+            $postId = $this->create(self::$entity, $this->safe());
             if ($this->fail()) {
                 $this->message->error("Erro ao cadastrar, verifique os dados");
                 return null;
             }
         }
 
-        $this->data = ($this->findById($userId))->data();
+        $this->data = ($this->findById($postId))->data();
         return $this;
     }
 
     /**
-     * @return null|User
+     * @return null|Post
      */
-    public function destroy(): ?User
+    public function destroy(): ?Post
     {
         if (!empty($this->id)) {
             $this->delete(self::$entity, "id = :id", "id={$this->id}");
