@@ -1,3 +1,2 @@
-<?php 
-    define('INCLUDE_PATH', 'http://localhost/MeuPetEspecial/')
-?>
+<?php
+require __DIR__ . "./vendor/autoload.php";

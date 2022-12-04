@@ -88,7 +88,7 @@ define("CONF_IMAGE_QUALITY", ["jpg" => 75, "png" => 5]);
 define("CONF_MAIL_HOST", "smtp.gmail.com");
 define("CONF_MAIL_PORT", "587");
 define("CONF_MAIL_USER", "brenofvs.consultoria@gmail.com");
-define("CONF_MAIL_PASS", "cdgcbjcdjqypfmne");
+define("CONF_MAIL_PASS", "aaaaaaaaaaaaaaaaaaaaaa");
 define("CONF_MAIL_SENDER", ["name" => "Brenofvs", "address" => "brenofvs.consultoria@gmail.com"]);
 define("CONF_MAIL_OPTION_LANG", "br");
 define("CONF_MAIL_OPTION_HTML", true);
