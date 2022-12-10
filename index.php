@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . "/../vendor/autoload.php";
 $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 
 if ($url = "test") {

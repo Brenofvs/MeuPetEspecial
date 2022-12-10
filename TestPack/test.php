@@ -19,7 +19,8 @@ $postData = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
 
 var_dump($postData);
 
-if (empty($postData["title"]) || empty($postData["body"]) || empty($postData["image"])) {
+if (!$postData) {
+} elseif (empty($postData["title"]) || empty($postData["body"]) || empty($postData["image"])) {
     $message->error("Ocorreu um erro, você precisa preencher todos os campos da matéria!");
     echo $message->render();
 } else {
