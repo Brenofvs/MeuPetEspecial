@@ -1,7 +1,6 @@
 <?php
-require 'fsphp.php';
+require './TestPack/fsphp.php';
 fullStackPHPClassName("Matérias");
-require __DIR__ . "/../vendor/autoload.php";
 /*
  * 
  */
