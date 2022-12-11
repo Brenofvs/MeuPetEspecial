@@ -1,0 +1,49 @@
+:root {
+	--fsphp: #1f2026;
+	--fsline: #475163;
+	--green: #35ba9b;
+	--blue: #3aadd9;
+	--yellow: #f5b945;
+	--red: #d94452;
+}
+
+.trigger {
+	font-size: 0.9em;
+	padding: 15px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin: 20px 0;
+	font-weight: bold;
+}
+
+.trigger small {
+	display: block;
+	margin-top: 7px;
+	font-family: "Source Code Pro", serif;
+	font-size: 0.75em;
+}
+
+.trigger.accept {
+	color: var(--green);
+	border-color: var(--green);
+	border: 1px solid;
+}
+
+.trigger.warning {
+	color: var(--yellow);
+	border-color: var(--yellow);
+	border: 1px solid;
+}
+
+.trigger.error {
+	color: var(--red);
+	border-color: var(--red);
+	border: 1px solid;
+}
+
+.trigger.info {
+	color: var(--blue);
+	border-color: var(--blue);
+	border: 1px solid;
+}
