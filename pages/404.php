@@ -1,1 +1,1 @@
-<img src="./../imagens/manutencao.png" alt="">
+<div class="container-fluid d-flex justify-content-center"><img src="./../imagens/manutencao.png" alt=""></div>

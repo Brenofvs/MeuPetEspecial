@@ -68,7 +68,7 @@ class Admin extends Model
         if ($passVerify) {
             $userSession = new Session;
             $userSession->set("user", $user);
-            header("Location: https://www.localhost/MeuPetEspecial/admin/");
+            header("Location: " . CONF_URL_ADMIN);
         }
         return $this;
     }

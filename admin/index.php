@@ -29,16 +29,25 @@ $userSession = new Session;
 
 if (!isset($_SESSION['user'])) {
     $userSession->set("user", "");
+    header("Location: " . CONF_URL_ADMIN);
 } elseif ($_SESSION['user'] === "") {
     include "./login.php";
 }
 
 if (!empty($_SESSION['user'] && $_SESSION['user'] === 'admin')) {
-    $urlAdmin = isset($_GET['url']) ? $_GET['url'] : 'home';
     include "./sidebar.php";
-
-    if (file_exists('./' . $urlAdmin . '.php')) {
-        include('./' . $urlAdmin . '.php');
+    $url = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '?page=dashboard';
+    $url_components = parse_url($url);
+    if (isset($url_components['query'])) {
+        parse_str($url_components['query'], $urlAdmin);
+        if ($urlAdmin['page'] === 'login') {
+            header("Location: " . CONF_URL_ADMIN);
+        }
+    } else {
+        $urlAdmin['page'] = 'dashboard';
+    }
+    if (file_exists('./' . $urlAdmin['page'] . '.php')) {
+        include('./' . $urlAdmin['page'] . '.php');
     } else {
         include('../pages/404.php');
     }
