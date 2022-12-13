@@ -24,8 +24,6 @@ session_start();
 use Source\Core\Session;
 
 $userSession = new Session;
-// $userSession->destroy();
-
 
 if (!isset($_SESSION['user'])) {
     $userSession->set("user", "");
@@ -46,10 +44,14 @@ if (!empty($_SESSION['user'] && $_SESSION['user'] === 'admin')) {
     } else {
         $urlAdmin['page'] = 'dashboard';
     }
-    if (file_exists('./' . $urlAdmin['page'] . '.php')) {
-        include('./' . $urlAdmin['page'] . '.php');
+    if (file_exists('./pages/' . $urlAdmin['page'] . '.php')) {
+        include('./pages/' . $urlAdmin['page'] . '.php');
     } else {
         include('../pages/404.php');
+    }
+    if ($urlAdmin['page'] === 'logout') {
+        $userSession->destroy();
+        header("Location: " . CONF_URL_ADMIN);
     }
 }
 

@@ -86,6 +86,7 @@ class Post extends Model
         );
 
         if ($this->fail() || !$all->rowCount()) {
+            $this->message->error("Ocorreu um erro");
             return null;
         }
         return $all->fetchAll(\PDO::FETCH_CLASS, __CLASS__);
@@ -117,7 +118,7 @@ class Post extends Model
             }
         }
 
-        /** User Create */
+        /** Post Create */
         if (empty($this->id)) {
             if ($this->findByTitle($this->title)) {
                 $this->message->warning("Uma postagem com este título já está cadastrada!");

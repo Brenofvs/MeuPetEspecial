@@ -15,6 +15,7 @@
 	border-radius: 4px;
 	margin: 20px 0;
 	font-weight: bold;
+	display: none;
 }
 
 .trigger small {
@@ -25,24 +26,28 @@
 }
 
 .trigger.success {
+	display: block;
 	color: var(--green);
 	border-color: var(--green);
 	border: 1px solid;
 }
 
 .trigger.warning {
+	display: block;
 	color: var(--yellow);
 	border-color: var(--yellow);
 	border: 1px solid;
 }
 
 .trigger.error {
+	display: block;
 	color: var(--red);
 	border-color: var(--red);
 	border: 1px solid;
 }
 
 .trigger.info {
+	display: block;
 	color: var(--blue);
 	border-color: var(--blue);
 	border: 1px solid;

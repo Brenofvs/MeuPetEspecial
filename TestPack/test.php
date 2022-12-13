@@ -6,33 +6,23 @@ fullStackPHPClassName("Matérias");
  */
 fullStackPHPClassSession("Cadastro de Matérias", __LINE__);
 
-use Source\Models\Post;
 use Source\Support\Message;
+use Source\Models\Post;
 
-require __DIR__ . "./../vendor/autoload.php";
-
-$model = new Post;
 $message = new Message;
+$post = new Post;
 
-$postData = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
+$post->all();
 
-var_dump($postData);
+var_dump($post);
+echo $message->render();
 
-if (!$postData) {
-} elseif (empty($postData["title"]) || empty($postData["body"]) || empty($postData["image"])) {
-    $message->error("Ocorreu um erro, você precisa preencher todos os campos da matéria!");
-    echo $message->render();
-} else {
-    $postData = $model->bootstrap($postData["title"], $postData["body"], $postData["image"]);
-    $postData->save();
-}
 
-echo "<form name='post' action='./test' method='post' enctype='multipart/form-data' novalidate>
-    <p style='margin-bottom: 10px; text-align: right'><a href='./test' title='Atualizar'>Atualizar</a></p>
-    <div class='col2'>
-        <input type='text' name='title' value='' placeholder='Titulo' required />
-        <input type='text' name='body' value='' placeholder='Materia' required />
-        <input type='text' name='image' value='' placeholder='imagem' required />
-    </div>
-    <button>Enviar Agora!</button>
-</form>";
+// echo $message->render() . "
+// <form name='post' action='./test?post=true' method='post' enctype='multipart/form-data' novalidate>
+//     <p style='margin-bottom: 10px; text-align: right'><a href='./test' title='Atualizar'>Atualizar</a></p>
+//     <div class='col2'>
+//         <input id='img-input' class='pl-4 form-control-file' type='file' name='file' value='' required>
+//     </div>
+//     <button>Enviar Agora!</button>
+// </form>";
