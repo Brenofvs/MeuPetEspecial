@@ -86,7 +86,6 @@ class Post extends Model
         );
 
         if ($this->fail() || !$all->rowCount()) {
-            $this->message->error("Ocorreu um erro");
             return null;
         }
         return $all->fetchAll(\PDO::FETCH_CLASS, __CLASS__);

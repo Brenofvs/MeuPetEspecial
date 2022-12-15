@@ -4,6 +4,24 @@ const mainBannerData = document.getElementById("main-banner-data");
 const arrowLeft = document.getElementById("arrowLeft");
 const arrowRight = document.getElementById("arrowRight");
 
+firstImg()
+
+function ajax() {
+	$.ajax({
+		url: "./scripts/mainBannerData.php",
+		type: "POST",
+		data: "bannerSrc=" + mainBanner.src
+	}).done(function (resposta) {
+		mainBannerData.innerHTML = resposta
+	});
+}
+
+function firstImg() {
+	mainBanner.src = pics[0].src
+	changeBorder(pics[0]);
+	ajax()
+}
+
 //variável para saber o array da imagem
 let i = 0;
 
@@ -26,11 +44,14 @@ function handleClick(pic, index) {
 	//variável que armazena a imagem selecionada da vez
 	let clickedPic = pic;
 
-	//executar função para trocar a borda da imagem selecionada
-	changeBorder(clickedPic);
+	setTimeout(() => {
+		//executar função para trocar a borda da imagem selecionada
+		changeBorder(clickedPic);
 
-	//trocar o src da imagem principal
-	mainBanner.src = src;
+		//trocar o src da imagem principal
+		mainBanner.src = src;
+		ajax()
+	}, 2000);
 
 	//voltar a variável que conta o tempo para 0
 	t = 0;
@@ -40,6 +61,8 @@ function handleClick(pic, index) {
 
 pics.forEach((pic, index) => {
 	pic.addEventListener("click", () => {
+		//chama função de animação
+		callAnimation();
 		handleClick(pic, index);
 	});
 });
@@ -69,6 +92,7 @@ function slideChange() {
 		changeBorder(selectedPic);
 		//trocar o src da imagem principal
 		mainBanner.src = slideSrc;
+		ajax()
 	}, 2000);
 	//voltar a variável que conta o tempo para 0
 	t = 0;
@@ -97,6 +121,7 @@ function slideReverse() {
 		changeBorder(selectedPic);
 		//trocar o src da imagem principal
 		mainBanner.src = slideSrc;
+		ajax()
 	}, 2000);
 	//voltar a variável que conta o tempo para 0
 	t = 0;

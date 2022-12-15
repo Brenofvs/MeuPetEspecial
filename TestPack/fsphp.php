@@ -31,6 +31,7 @@ ini_set('xdebug.overload_var_dump', 1);
  * [ interface ] Style, icon and logo
  */
 echo "<link rel='stylesheet' href='./TestPack/fsphp.css'/>";
+// echo "<link rel='stylesheet' href='./style/style.css'>";
 
 
 /**
@@ -38,7 +39,7 @@ echo "<link rel='stylesheet' href='./TestPack/fsphp.css'/>";
  */
 function fullStackPHPClassName($className)
 {
-    echo "<title>{$className} | Full Stack PHP Developer</title>";
+    echo "<title>{$className}</title>";
 }
 
 

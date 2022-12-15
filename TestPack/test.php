@@ -1,5 +1,6 @@
 <?php
 require './TestPack/fsphp.php';
+include './TestPack/script.php';
 fullStackPHPClassName("Matérias");
 /*
  * 
@@ -10,11 +11,62 @@ use Source\Support\Message;
 use Source\Models\Post;
 
 $message = new Message;
-$post = new Post;
+$find = new Post;
+?>
 
-$post->all();
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
 
-var_dump($post);
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <h1>Passar dados (string) do JavaScript para o PHP</h1>
+    <button onclick="sendStrings()">Entre com o seu nome e sobrenome</button>
+
+    <div id="demo"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        function sendStrings() {
+            // define as variáveis nome e sobrenome
+            let nome = prompt("Digite o seu nome");
+            let sobrenome = prompt("Digite o seu sobrenome");
+
+            // REQUISIÇÃO AJAX
+            // cria o objeto XMLHttpRequest
+            const xhttp = new XMLHttpRequest();
+            // chama a função quando a requisição é recebida
+            xhttp.onload = function() {
+                document.getElementById("demo").innerHTML = this.responseText;
+            }
+            // faz a requisição AJAX - método POST
+            xhttp.open("POST", "./TestPack/script.php");
+            // adiciona um header para a requisição HTTP
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            // especifica os dados que deseja enviar   
+            xhttp.send("nome=" + nome + "&sobrenome=" + sobrenome);
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+<?php
+var_dump($_POST);
+
+// $findResult = $find->find("image = :img", "img={$var}");
+// var_dump($findResult);
+
+
 echo $message->render();
 
 

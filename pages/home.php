@@ -1,3 +1,13 @@
+<?php
+
+use Source\Support\Message;
+use Source\Models\Post;
+
+$message = new Message;
+$post = new Post;
+
+?>
+
 <main id="home" class="load-animation">
     <div class="main-home container-body">
         <h1 class="home-title font-title-xl">Últimas Matérias</h1>
@@ -8,37 +18,22 @@
                     <img id="main-banner" src="./imagens/pets/pet07.png" alt="">
                     <span id="arrowRight"><img src="./imagens/dec/seta-right.svg" alt=""></span>
                     <div id="main-banner-data" class="main-banner-data">
-                        <div class="main-banner-container">
-                            <h3 class="font-menu cor-11">Nome do Pet</h3>
-                            <p class="font-text-m">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                                aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
-                                rhoncus dolor purus non enim</p>
-                            <a href="#" class="botao">Saiba Mais</a>
-                        </div>
+
                     </div>
                 </div>
 
                 <div class="picture">
 
-                    <div class="pic-mask">
-                        <img class="pic-thumb border" src="./imagens/pets/pet07.png" alt="">
-                    </div>
+                    <?php
 
-                    <div class="pic-mask">
-                        <img class="pic-thumb" src="./imagens/pets/pet04.jpg" alt="">
-                    </div>
-
-                    <div class="pic-mask">
-                        <img class="pic-thumb" src="./imagens/pets/pet02.jpg" alt="">
-                    </div>
-
-                    <div class="pic-mask">
-                        <img class="pic-thumb" src="./imagens/pets/pet06.jpg" alt="">
-                    </div>
-
-                    <div class="pic-mask">
-                        <img class="pic-thumb" src="./imagens/pets/pet03.jpg" alt="">
-                    </div>
+                    $all = $post->All(5);
+                    foreach ($all as $user) {
+                        echo "                        
+                        <div class='pic-mask'>
+                            <img class='pic-thumb border' src='{$user->image}' alt=''>
+                        </div>";
+                    }
+                    ?>
 
                 </div>
             </div>
@@ -73,10 +68,22 @@
     </div>
     <div class="cards-container">
         <div class="cards">
-            <div class="card">
+            <?php
+
+            $all = $post->All(6);
+            foreach ($all as $user) {
+                echo "<div class='card'>
+                <img src='{$user->image}' alt=''>
+                <h1 class='pet-title font-subtitle'>{$user->title}</h1>
+                <p class='pet-desc font-text-m cor-8'>{$user->body}</p>
+                <a href='./materias?id={$user->id}' class='botao botao-pet'>Leia Mais...</a>
+                </div>";
+            }
+            ?>
+            <!-- <div class="card">
                 <img src="./imagens/pets/pet01.jpg" alt="">
                 <h1 class="pet-title font-subtitle">Nome do Pet</h1>
-                <p class="pet-desc font-text-m cor-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
+                <p class="pet-desc font-text-m cor-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
                 <a href="#" class="botao botao-pet">Leia Mais...</a>
             </div>
             <div class="card">
@@ -108,10 +115,11 @@
                 <h1 class="pet-title font-subtitle">Nome do Pet</h1>
                 <p class="pet-desc font-text-m cor-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
                 <a href="#" class="botao botao-pet">Leia Mais...</a>
-            </div>
+            </div> -->
         </div>
         <a href="materias" class="botao botao-mais">Outras matérias</a>
     </div>
 </section>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="./scripts/home-main-slider.js"></script>
