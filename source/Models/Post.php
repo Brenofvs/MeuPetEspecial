@@ -105,7 +105,7 @@ class Post extends Model
         if (!empty($this->id)) {
             $postId = $this->id;
 
-            if ($this->find("title = :t AND id != :i", "e={$this->title}&i={$postId}")) {
+            if ($this->find("title = :t AND id != :i", "t={$this->title}&i={$postId}")) {
                 $this->message->warning("Uma postagem com este título já está cadastrada");
                 return null;
             }

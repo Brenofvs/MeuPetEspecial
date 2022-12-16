@@ -27,10 +27,10 @@ $post = new Post;
                     <?php
 
                     $all = $post->All(5);
-                    foreach ($all as $user) {
+                    foreach ($all as $posts) {
                         echo "                        
                         <div class='pic-mask'>
-                            <img class='pic-thumb border' src='{$user->image}' alt=''>
+                            <img class='pic-thumb border' src='{$posts->image}' alt=''>
                         </div>";
                     }
                     ?>
@@ -71,51 +71,15 @@ $post = new Post;
             <?php
 
             $all = $post->All(6);
-            foreach ($all as $user) {
+            foreach ($all as $posts) {
                 echo "<div class='card'>
-                <img src='{$user->image}' alt=''>
-                <h1 class='pet-title font-subtitle'>{$user->title}</h1>
-                <p class='pet-desc font-text-m cor-8'>{$user->body}</p>
-                <a href='./materias?id={$user->id}' class='botao botao-pet'>Leia Mais...</a>
+                <img src='{$posts->image}' alt=''>
+                <h1 class='pet-title font-subtitle'>{$posts->title}</h1>
+                <p class='pet-desc font-text-m cor-8'>{$posts->body}</p>
+                <a href='./materias?id={$posts->id}' class='botao botao-pet'>Leia Mais...</a>
                 </div>";
             }
             ?>
-            <!-- <div class="card">
-                <img src="./imagens/pets/pet01.jpg" alt="">
-                <h1 class="pet-title font-subtitle">Nome do Pet</h1>
-                <p class="pet-desc font-text-m cor-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
-                <a href="#" class="botao botao-pet">Leia Mais...</a>
-            </div>
-            <div class="card">
-                <img src="./imagens/pets/pet02.jpg" alt="">
-                <h1 class="pet-title font-subtitle">Nome do Pet</h1>
-                <p class="pet-desc font-text-m cor-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
-                <a href="#" class="botao botao-pet">Leia Mais...</a>
-            </div>
-            <div class="card">
-                <img src="./imagens/pets/pet03.jpg" alt="">
-                <h1 class="pet-title font-subtitle">Nome do Pet</h1>
-                <p class="pet-desc font-text-m cor-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
-                <a href="#" class="botao botao-pet">Leia Mais...</a>
-            </div>
-            <div class="card">
-                <img src="./imagens/pets/pet04.jpg" alt="">
-                <h1 class="pet-title font-subtitle">Nome do Pet</h1>
-                <p class="pet-desc font-text-m cor-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
-                <a href="#" class="botao botao-pet">Leia Mais...</a>
-            </div>
-            <div class="card">
-                <img src="./imagens/pets/pet05.jpg" alt="">
-                <h1 class="pet-title font-subtitle">Nome do Pet</h1>
-                <p class="pet-desc font-text-m cor-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
-                <a href="#" class="botao botao-pet">Leia Mais...</a>
-            </div>
-            <div class="card">
-                <img src="./imagens/pets/pet06.jpg" alt="">
-                <h1 class="pet-title font-subtitle">Nome do Pet</h1>
-                <p class="pet-desc font-text-m cor-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
-                <a href="#" class="botao botao-pet">Leia Mais...</a>
-            </div> -->
         </div>
         <a href="materias" class="botao botao-mais">Outras matérias</a>
     </div>

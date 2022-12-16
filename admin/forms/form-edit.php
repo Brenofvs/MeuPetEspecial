@@ -7,7 +7,7 @@
 
                         <div class="text-center mt-4">
                             <div class="d-flex mb-4 justify-content-between">
-                                <h1 class="h2">Criar nova matéria!</h1>
+                                <h1 class="h2">Editar matéria!</h1>
                                 <a href='?page=materias' class='btn btn-primary d-inline-flex justify-content-center align-items-center fs-5'><i class='align-middle me-2' data-feather='arrow-left-circle'></i>Voltar</a>
                             </div>
                             <?= $message->render(); ?>
@@ -16,20 +16,20 @@
                         <div class="card mt-4">
                             <div class="card-body ">
                                 <div class="m-sm-4">
-                                    <form name='post' action='./?page=post&post=true' method='post' enctype='multipart/form-data'>
+                                    <form name='post' action='./?page=edit&postId=<?= $postUpdt->id ?>' method='post' enctype='multipart/form-data'>
                                         <div class="mb-3">
                                             <label class="form-label">Titulo</label>
-                                            <input class="form-control form-control-lg" name='title' value='' placeholder='Insira o titulo' required />
+                                            <input class="form-control form-control-lg" name='title' value='' placeholder='<?= $postUpdt->title ?>' />
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Texto da Matéria</label>
-                                            <textarea rows="10" class="form-control form-control-lg" name='body' value='' placeholder='Comece a escrever!' required></textarea>
+                                            <textarea rows="10" class="form-control form-control-lg" name='body' value='' placeholder='<?= $postUpdt->body ?>'></textarea>
                                         </div>
                                         <div class="mb-3 row">
                                             <label class="form-label col-12">Carregue a imagem de capa!</label>
-                                            <input id="img-input" class="pl-4 form-control-file" type='file' name='file' required>
+                                            <input id="img-input" class="pl-4 form-control-file" type='file' name='file'>
                                             <div id="img-container">
-                                                <img id="preview" class="img-fluid mt-4" src="">
+                                                <img id="preview" class="img-fluid mt-4" src=".<?= $postUpdt->image ?>">
                                             </div>
                                         </div>
                                         <div class="text-center mt-3">

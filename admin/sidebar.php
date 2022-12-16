@@ -18,20 +18,8 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="?page=post">
-                            <i class="align-middle"></i> <span class="align-middle">Cadastrar Matéria</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="?page=edit">
-                            <i class="align-middle"></i> <span class="align-middle">Editar Matéria</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="?page=delete">
-                            <i class="align-middle"></i> <span class="align-middle">Excluir Matéria</span>
+                        <a class="sidebar-link" href="?page=materias">
+                            <i class="align-middle"></i> <span class="align-middle">Matérias</span>
                         </a>
                     </li>
                 </ul>
