@@ -1,13 +1,3 @@
-<?php
-
-use Source\Support\Message;
-use Source\Models\Post;
-
-$message = new Message;
-$post = new Post;
-
-?>
-
 <main id="home" class="load-animation">
     <div class="main-home container-body">
         <h1 class="home-title font-title-xl">Últimas Matérias</h1>
@@ -39,26 +29,9 @@ $post = new Post;
 
                 </div>
             </div>
-            <aside id="aside" class="main-aside">
-                <div class="aside-container">
-                    <h1 class="font-title-m">categorias</h1>
-                    <a class="font-menu" href="#"><span class="dec">Histórias de leitores</span></a>
-                    <a class="font-menu" href="#"><span class="dec">Matérias especiais</span></a>
-                    <a class="font-menu" href="#"><span class="dec">Patologias e condições</span></a>
-                    <a class="font-menu" href="#"><span class="dec">Petit, o grande motivador do site</span></a>
-                    <a class="font-menu" href="#"><span class="dec">Vida, a cachorrinha atropelada</span></a>
-                    <a class="font-menu" href="#"><span class="dec">Categoria Livre</span></a>
-                </div>
-                <div class="aside-container">
-                    <h1 class="font-title-m">Redes sociais</h1>
-                    <a href="#" class="font-menu aside-social-media"><span><img src="./imagens/logo/facebook-logo.svg">Facebook</span></a>
-                    <a href="#" class="font-menu aside-social-media"><span><img src="./imagens/logo/youtube-logo.svg">Youtube</span></a>
-                    <a href="#" class="font-menu aside-social-media"><span><img src="./imagens/logo/insta-logo.svg">Instagram</span></a>
-                </div>
-                <div class="aside-container">
-                    <h1 class="font-title-m">Anúncio dos patrocinadores</h1>
-                </div>
-            </aside>
+            <?php
+            include("./pages/aside.php")
+            ?>
         </div>
     </div>
 </main>
@@ -71,14 +44,14 @@ $post = new Post;
     <div class="cards-container">
         <div class="cards">
             <?php
+            $all = $post->All(6);
             if (!is_null($all)) {
-                $all = $post->All(6);
                 foreach ($all as $posts) {
                     echo "<div class='card'>
                 <img src='{$posts->image}' alt=''>
                 <h1 class='pet-title font-subtitle'>" . mb_strimwidth("{$posts->title}", 0, 40, "...") . "</h1>
                 <p class='pet-desc font-text-m cor-8'>" . mb_strimwidth("{$posts->body}", 0, 150, "...") . "</p>
-                <a href='./materias?id={$posts->id}' class='botao botao-pet'>Leia Mais...</a>
+                <a href='./materia&id={$posts->id}' class='botao botao-pet'>Leia Mais...</a>
                 </div>";
                 }
             } else {

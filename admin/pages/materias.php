@@ -38,8 +38,12 @@ $post = new Post;
             foreach ($all as $posts) {
                 $pUp = "";
                 $mz = "";
+                $crtTime =
+                    new DateTimeImmutable($posts->created_at);
                 if ($posts->updated_at) {
-                    $pUp = "<p class='card-text'><small class='text-muted'>Atualizado em {$posts->updated_at}</small></p>";
+                    $updTime =
+                        new DateTimeImmutable($posts->updated_at);
+                    $pUp = "<p class='card-text'><small class='text-muted'>Atualizado em " . $updTime->format('d-m-Y H:i:s') . "</small></p>";
                     $mz = "m-0";
                 }
                 echo "<div class='col-12 col-xl-6 col-xxl-4'>
@@ -52,7 +56,7 @@ $post = new Post;
                         <div class='card-body'>
                             <h5 class='card-title'>{$posts->title}</h5>
                             <p class='card-text'>{$posts->body}</p>
-                            <p class='card-text {$mz}'><small class='text-muted'>Criado em {$posts->created_at}</small></p>
+                            <p class='card-text {$mz}'><small class='text-muted'>Criado em " . $crtTime->format('d-m-Y H:i:s') . "</small></p>
                             {$pUp}
                             <a href='?page=edit&postId={$posts->id}' class='btn btn-warning d-inline-flex justify-content-center align-items-center text-body'><i class='align-middle me-2' data-feather='edit'></i>Editar</a>
                             <a href='?page=delete&postId={$posts->id}' class='btn btn-danger d-inline-flex justify-content-center align-items-center'><i class='align-middle me-2' data-feather='trash-2'></i>Excluir</a>

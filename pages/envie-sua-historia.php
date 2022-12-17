@@ -1,4 +1,4 @@
-<main class="contato-body">
+<main id="home" class="contato-body load-animation">
     <div class="contato-background"></div>
     <div class="historia-title container">
         <p class="font-text-m cor-8">Quer compartilhar sua história conosco?</p>
@@ -48,8 +48,7 @@
                             <option value="12">12 anos</option>
                             <option value="13">13 anos</option>
                             <option value="14">14 anos</option>
-                            <option value="15">15 anos</option>
-                            <option value="15+">Mais de 15 anos</option>
+                            <option value="15+">15 anos ou mais</option>
                         </select>
                     </div>
                     <div class="sexPet">

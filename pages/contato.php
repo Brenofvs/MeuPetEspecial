@@ -1,4 +1,4 @@
-<main class="contato-body">
+<main id="home" class="contato-body load-animation">
     <div class="contato-background"></div>
     <div class="historia-title container">
         <p class="font-text-m cor-8">Quer compartilhar sua história conosco?</p>
