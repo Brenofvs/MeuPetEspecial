@@ -125,6 +125,7 @@
 }
 
 .main-section {
+  width: 100%;
   max-width: 1100px;
 }
 .main-section h1 {
@@ -736,4 +737,57 @@
   .cards {
     padding: 8px;
   }
+}
+/* Message CSS */
+:root {
+  --fsphp: #1f2026;
+  --fsline: #475163;
+  --green: #35ba9b;
+  --blue: #3aadd9;
+  --yellow: #f5b945;
+  --red: #d94452;
+}
+
+.trigger {
+  font-size: 0.9em;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 20px 0;
+  font-weight: bold;
+  display: none;
+}
+
+.trigger small {
+  display: block;
+  margin-top: 7px;
+  font-family: "Source Code Pro", serif;
+  font-size: 0.75em;
+}
+
+.trigger.success {
+  display: block;
+  color: var(--green);
+  border-color: var(--green);
+  border: 1px solid;
+}
+
+.trigger.warning {
+  display: block;
+  color: var(--yellow);
+  border-color: var(--yellow);
+  border: 1px solid;
+}
+
+.trigger.error {
+  display: block;
+  color: var(--red);
+  border-color: var(--red);
+  border: 1px solid;
+}
+
+.trigger.info {
+  display: block;
+  color: var(--blue);
+  border-color: var(--blue);
+  border: 1px solid;
 }/*# sourceMappingURL=home.css.map */

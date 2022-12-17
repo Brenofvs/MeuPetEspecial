@@ -52,7 +52,7 @@ $postData = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
 $postUpdt = $model->findById($postId);
 
 if ($postData) {
-    if (!empty($postData["title"]) || !empty($postData["body"]) || !empty($postData["file"]) || !empty($fileDir)) {
+    if (!empty($postData["title"]) || !empty($postData["body"]) || !empty($fileDir)) {
 
         if (!empty($postData['title'])) {
             $postUpdt->title = $postData['title'];
@@ -62,9 +62,8 @@ if ($postData) {
             $postUpdt->body = $postData['body'];
         }
 
-        if (empty($fileDir) && !empty($postData['file'])) {
-            $postUpdt->image = $postData['file'];
-        } elseif (!empty($fileDir) && empty($postData['file'])) {
+        if (!empty($fileDir)) {
+            unlink("." . $postUpdt->image);
             $postUpdt->image = $fileDir;
         }
 

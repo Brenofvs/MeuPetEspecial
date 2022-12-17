@@ -33,7 +33,7 @@
                                             </div>
                                         </div>
                                         <div class="text-center mt-3">
-                                            <button style="width: 60%; font-size: 20px;" class="btn btn-lg btn-block btn-primary" id="button">Enviar</button>
+                                            <button style="width: 60%; font-size: 20px;" class="btn btn-lg btn-block btn-success" id="button"><i class='align-middle me-2' data-feather='file-text'></i>Criar Matéria!</button>
                                         </div>
                                     </form>
                                 </div>

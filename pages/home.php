@@ -27,11 +27,13 @@ $post = new Post;
                     <?php
 
                     $all = $post->All(5);
-                    foreach ($all as $posts) {
-                        echo "                        
+                    if (!is_null($all)) {
+                        foreach ($all as $posts) {
+                            echo "                        
                         <div class='pic-mask'>
                             <img class='pic-thumb border' src='{$posts->image}' alt=''>
                         </div>";
+                        }
                     }
                     ?>
 
@@ -69,15 +71,19 @@ $post = new Post;
     <div class="cards-container">
         <div class="cards">
             <?php
-
-            $all = $post->All(6);
-            foreach ($all as $posts) {
-                echo "<div class='card'>
+            if (!is_null($all)) {
+                $all = $post->All(6);
+                foreach ($all as $posts) {
+                    echo "<div class='card'>
                 <img src='{$posts->image}' alt=''>
-                <h1 class='pet-title font-subtitle'>{$posts->title}</h1>
-                <p class='pet-desc font-text-m cor-8'>{$posts->body}</p>
+                <h1 class='pet-title font-subtitle'>" . mb_strimwidth("{$posts->title}", 0, 40, "...") . "</h1>
+                <p class='pet-desc font-text-m cor-8'>" . mb_strimwidth("{$posts->body}", 0, 150, "...") . "</p>
                 <a href='./materias?id={$posts->id}' class='botao botao-pet'>Leia Mais...</a>
                 </div>";
+                }
+            } else {
+                $message->error("Parece que não há nenhuma matéria a ser exibida ainda :(");
+                echo $message->render();
             }
             ?>
         </div>
