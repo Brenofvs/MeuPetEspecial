@@ -55,7 +55,7 @@ $post = new Post;
                     <div class='col-md-7'>
                         <div class='card-body'>
                             <h5 class='card-title'>{$posts->title}</h5>
-                            <p class='card-text'>{$posts->body}</p>
+                            <p class='card-text'>" . filter_var($posts->body, FILTER_SANITIZE_SPECIAL_CHARS) . "</p>
                             <p class='card-text {$mz}'><small class='text-muted'>Criado em " . $crtTime->format('d-m-Y H:i:s') . "</small></p>
                             {$pUp}
                             <a href='?page=edit&postId={$posts->id}' class='btn btn-warning d-inline-flex justify-content-center align-items-center text-body'><i class='align-middle me-2' data-feather='edit'></i>Editar</a>

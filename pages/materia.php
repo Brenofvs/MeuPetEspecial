@@ -38,7 +38,7 @@ if (!is_null($materia)) {
                     <div class="main-banner">
                         <img src="<?= $materia->image ?>" alt="">
                     </div>
-                    <p class="font-text-m materia-body"><?= $materia->body ?></p>
+                    <div class="font-text-m materia-body"><?= $materia->body ?></div>
                     <div class="afters" style="margin: 20px 0;">
                         <div class="btn-detail">
                             <div class="btns">

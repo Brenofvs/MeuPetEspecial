@@ -48,7 +48,7 @@ if ($_FILES && !empty($_FILES['file']['name'])) {
     $message->error("Whoops, parece que o arquivo é muito grande!");
 }
 
-$postData = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
+$postData = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $postUpdt = $model->findById($postId);
 
 if ($postData) {

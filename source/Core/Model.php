@@ -99,7 +99,7 @@ abstract class Model
             $values = ":" . implode(", :", array_keys($data));
 
             $stmt = Connect::getInstance()->prepare("INSERT INTO {$entity} ({$columns}) VALUES ({$values})");
-            $stmt->execute($this->filter($data));
+            $stmt->execute($data);
 
             return Connect::getInstance()->lastInsertId();
         } catch (\PDOException $exception) {
@@ -154,7 +154,7 @@ abstract class Model
             parse_str($params, $param);
 
             $stmt = Connect::getInstance()->prepare("UPDATE {$entity} SET {$dateSet} WHERE {$terms}");
-            $stmt->execute($this->filter(array_merge($data, $param)));
+            $stmt->execute(array_merge($data, $param));
             return ($stmt->rowCount() ?? 1);
         } catch (\PDOException $exception) {
             $this->fail = $exception;
@@ -201,7 +201,7 @@ abstract class Model
     {
         $filter = [];
         foreach ($data as $key => $value) {
-            $filter[$key] = (is_null($value) ? null : filter_var($value, \FILTER_DEFAULT));
+            $filter[$key] = (is_null($value) ? null : filter_var($value, FILTER_SANITIZE_SPECIAL_CHARS));
         }
         return $filter;
     }
