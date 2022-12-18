@@ -63,7 +63,9 @@ if ($postData) {
         }
 
         if (!empty($fileDir)) {
-            unlink("." . $postUpdt->image);
+            if (file_exists("." . $postUpdt->image)) {
+                unlink("." . $postUpdt->image);
+            }
             $postUpdt->image = $fileDir;
         }
 
