@@ -123,11 +123,13 @@
     flex-direction: row;
     background-color: var(--cor-4);
     border-radius: 5px;
+    justify-content: flex-start;
   }
   .other-text {
     padding: 8px;
     display: grid;
     grid-template-columns: 1fr;
+    width: 100%;
   }
   .other-text h1 {
     margin: 0;
@@ -142,10 +144,10 @@
 }
 @media (max-width: 1000px) {
   .other-text h1 {
-    font: 400 clamp(0.6rem, 1vw, 1rem)/1.25 "Roboto", sans-serif;
+    font: 400 clamp(0.8rem, 1vw, 1rem)/1.25 "Roboto", sans-serif;
   }
   .other-text p {
-    font: 400 clamp(0.6rem, 1vw, 1rem)/1.25 "Roboto", sans-serif;
+    font: 400 clamp(0.8rem, 1vw, 1rem)/1.25 "Roboto", sans-serif;
   }
 }
 @media (max-width: 700px) {
