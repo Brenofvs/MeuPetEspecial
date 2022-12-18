@@ -19,11 +19,11 @@
                                     <form name='post' action='./?page=edit&postId=<?= $postUpdt->id ?>' method='post' enctype='multipart/form-data'>
                                         <div class="mb-3">
                                             <label class="form-label">Titulo</label>
-                                            <input class="form-control form-control-lg" name='title' value='' placeholder='<?= $postUpdt->title ?>' />
+                                            <textarea style="resize: none" rows="1" class="form-control form-control-lg" name='title' value=''><?= $postUpdt->title ?></textarea>
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Texto da Matéria</label>
-                                            <textarea rows="10" class="form-control form-control-lg" name='body' value='' placeholder='<?= $postUpdt->body ?>'></textarea>
+                                            <textarea rows="15" class="form-control form-control-lg" name='body' value=''><?= $postUpdt->body ?></textarea>
                                         </div>
                                         <div class="mb-3 row">
                                             <label class="form-label col-12">Carregue a imagem de capa!</label>

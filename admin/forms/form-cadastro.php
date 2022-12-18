@@ -23,7 +23,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Texto da Matéria</label>
-                                            <textarea rows="10" class="form-control form-control-lg" name='body' value='' placeholder='Comece a escrever!' required></textarea>
+                                            <textarea rows="15" class="form-control form-control-lg" name='body' value='' placeholder='Comece a escrever!' required></textarea>
                                         </div>
                                         <div class="mb-3 row">
                                             <label class="form-label col-12">Carregue a imagem de capa!</label>
