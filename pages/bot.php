@@ -9,14 +9,14 @@
             </div>
             <div class="links-footer">
                 <div class="linksf">
-                    <a class="font-menu" href="./quem-somos.html">Quem Somos</a>
-                    <a class="font-menu" href="./materias.html">Matérias</a>
+                    <a class="font-menu" href="./quem-somos">Quem Somos</a>
+                    <a class="font-menu" href="./materias">Matérias</a>
                     <a class="font-menu" href="#">Nossos Pets Especiais</a>
                 </div>
                 <div class="linksf">
                     <a class="font-menu" href="#">Vídeos</a>
-                    <a class="font-menu" href="#">Envie sua história</a>
-                    <a class="font-menu" href="#">Fale Conosco</a>
+                    <a class="font-menu" href="./envie-sua-historia">Envie sua história</a>
+                    <a class="font-menu" href="./contato">Fale Conosco</a>
                 </div>
             </div>
             <div class="social-media-footer">

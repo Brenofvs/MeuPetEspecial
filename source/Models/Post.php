@@ -38,6 +38,21 @@ class Post extends Model
     }
 
     /**
+     * @param string $query
+     * @param string $params
+     * @param string $columns
+     * @return array|null
+     */
+    public function queryBuild(string $query, string $params = "", string $columns = "*"): ?array
+    {
+        $qb = $this->read("SELECT {$columns} FROM " . self::$entity . " {$query}", $params);
+        if ($this->fail() || !$qb->rowCount()) {
+            return null;
+        }
+        return $qb->fetchAll(\PDO::FETCH_CLASS, __CLASS__);
+    }
+
+    /**
      * @param string $terms
      * @param string $params
      * @param string $columns

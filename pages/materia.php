@@ -8,14 +8,12 @@
 <?php
 if (isset($_GET['id'])) {
     $materiaId = intval(filter_input(INPUT_GET, "id"));
-    $previewId = $materiaId - 1;
-    $nextId = $materiaId + 1;
 } else {
     $materiaId = "";
 }
 $materia = $post->findById($materiaId);
-$preview = $post->findById($previewId);
-$next = $post->findById($nextId);
+$preview = $post->find("id < :id LIMIT 1", "id={$materiaId}");
+$next = $post->find("id > :id LIMIT 1", "id={$materiaId}");
 if (!is_null($materia)) {
     $crtTime =
         new DateTimeImmutable($materia->created_at);
@@ -65,12 +63,13 @@ if (!is_null($materia)) {
                             <div class="others-cards">
                                 <?php
 
-                                $others = $post->All(4);
+                                $others = $post->queryBuild("ORDER BY Rand() LIMIT :limit", "limit=4");
 
-                                foreach ($others as $posts) {
-                                    $crtTimeOth =
-                                        new DateTimeImmutable($posts->created_at);
-                                    echo "<div class='other-card'>
+                                if (!is_null($others)) {
+                                    foreach ($others as $posts) {
+                                        $crtTimeOth =
+                                            new DateTimeImmutable($posts->created_at);
+                                        echo "<div class='other-card'>
                                 <div class='others-img'>
                                     <img src='{$posts->image}' alt=''>
                                 </div>
@@ -80,7 +79,12 @@ if (!is_null($materia)) {
                                     <a href='./materia&id={$posts->id}' class='botao botao-pet'>Leia Mais...</a>
                                 </div>
                             </div>";
+                                    }
+                                } else {
+                                    $message->error("Ops, parece que houve um erro ao buscar outras matérias");
+                                    echo $message->render();
                                 }
+
                                 ?>
                             </div>
                         </div>
