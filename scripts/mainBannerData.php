@@ -6,7 +6,7 @@ use Source\Models\Post;
 $post = new Post;
 
 $imgSrc =
-    str_replace("https://www.localhost/MeuPetEspecial", ".", filter_input(INPUT_POST, 'bannerSrc', FILTER_SANITIZE_SPECIAL_CHARS));
+    str_replace("http://localhost/MeuPetEspecial", ".", filter_input(INPUT_POST, 'bannerSrc', FILTER_SANITIZE_SPECIAL_CHARS));
 
 $result = $post->find("image = :img", "img={$imgSrc}");
 

@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
     $materiaId = "";
 }
 $materia = $post->findById($materiaId);
-$preview = $post->find("id < :id LIMIT 1", "id={$materiaId}");
+$preview = $post->find("id < :id ORDER BY id DESC LIMIT 1", "id={$materiaId}");
 $next = $post->find("id > :id LIMIT 1", "id={$materiaId}");
 if (!is_null($materia)) {
     $crtTime =
@@ -74,7 +74,7 @@ if (!is_null($materia)) {
                                     <img src='{$posts->image}' alt=''>
                                 </div>
                                 <div class='other-text'>
-                                    <h1 class='font-text-sm' style='font-weight: 500;'>" . mb_strimwidth($posts->title, 0, 60) . "</h1>
+                                    <h1 class='font-text-m' style='font-weight: 500;'>" . mb_strimwidth($posts->title, 0, 60) . "</h1>
                                     <p class='font-text-sm'>Postado em " . $crtTimeOth->format('d-m-Y') . "</p>
                                     <a href='./materia&id={$posts->id}' class='botao botao-pet'>Leia Mais...</a>
                                 </div>
